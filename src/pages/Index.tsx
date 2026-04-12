@@ -1,6 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 import Icon from "@/components/ui/icon";
 
+const DROPDOWN_ITEMS = [
+  { id: "routes", label: "Виртуальные маршруты", emoji: "🗺️" },
+  { id: "heritage", label: "Достопримечательности", emoji: "🏛️" },
+  { id: "dates", label: "Памятные даты", emoji: "📅" },
+  { id: "holidays", label: "Праздники", emoji: "🎉" },
+  { id: "traditions", label: "Традиции", emoji: "🌿" },
+];
+
 const CATEGORIES = [
   { id: "routes", label: "Виртуальные маршруты", icon: "Map", emoji: "🗺️" },
   { id: "traditions", label: "Традиции", icon: "Heart", emoji: "🌿" },
@@ -362,37 +370,81 @@ function Modal({ card, onClose }: { card: CardData; onClose: () => void }) {
   );
 }
 
+function SectionsDropdown({ onSelect }: { onSelect: (id: string) => void }) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, []);
+
+  return (
+    <div ref={ref} className="relative">
+      <button
+        onClick={() => setOpen(v => !v)}
+        className={`flex items-center gap-2 px-4 py-2 rounded-xl font-body font-medium text-sm transition-all duration-200 border shadow-sm
+          ${open
+            ? "bg-[#2D6A4F] text-white border-[#2D6A4F] shadow-md shadow-[#2D6A4F]/20"
+            : "bg-white text-[#1B4332] border-[#E8D9B8] hover:border-[#C9A84C] hover:shadow-md"
+          }`}
+      >
+        Разделы
+        <Icon
+          name="ChevronDown"
+          size={16}
+          className={`transition-transform duration-300 ${open ? "rotate-180" : ""}`}
+        />
+      </button>
+
+      {/* Dropdown panel */}
+      <div
+        className="absolute top-full right-0 mt-2 w-56 origin-top"
+        style={{
+          transform: open ? "scaleY(1)" : "scaleY(0.92)",
+          opacity: open ? 1 : 0,
+          pointerEvents: open ? "auto" : "none",
+          transition: "transform 0.22s cubic-bezier(0.16,1,0.3,1), opacity 0.18s ease",
+        }}
+      >
+        <div className="bg-white rounded-2xl border border-[#E8D9B8] shadow-xl shadow-black/10 overflow-hidden py-1.5">
+          {DROPDOWN_ITEMS.map((item, i) => (
+            <button
+              key={item.id}
+              onClick={() => { onSelect(item.id); setOpen(false); }}
+              className="w-full flex items-center gap-3 px-4 py-2.5 text-sm font-body text-[#374151] hover:bg-[#F2EAD3] hover:text-[#1B4332] transition-colors text-left group"
+              style={{ animationDelay: `${i * 30}ms` }}
+            >
+              <span className="text-base">{item.emoji}</span>
+              <span className="flex-1">{item.label}</span>
+              <Icon name="ChevronRight" size={13} className="text-[#C9A84C] opacity-0 group-hover:opacity-100 transition-opacity" />
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Index() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
-  const [search, setSearch] = useState("");
-  const [regionFilter, setRegionFilter] = useState("Все регионы");
   const [modalCard, setModalCard] = useState<CardData | null>(null);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
 
   const scrollToCategory = (id: string) => {
     setActiveCategory(id);
-    setMobileMenuOpen(false);
     setTimeout(() => {
       sectionRefs.current[id]?.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 50);
   };
 
-  const filteredCards = ALL_CARDS.filter(card => {
-    const matchSearch = search === "" ||
-      card.title.toLowerCase().includes(search.toLowerCase()) ||
-      card.desc.toLowerCase().includes(search.toLowerCase()) ||
-      card.tags.some(t => t.toLowerCase().includes(search.toLowerCase()));
-    const matchRegion = regionFilter === "Все регионы" || card.region === regionFilter;
-    return matchSearch && matchRegion;
-  });
-
   const groupedCards = CATEGORIES.reduce<Record<string, CardData[]>>((acc, cat) => {
-    acc[cat.id] = filteredCards.filter(c => c.category === cat.id);
+    acc[cat.id] = ALL_CARDS.filter(c => c.category === cat.id);
     return acc;
   }, {});
-
-  const hasResults = filteredCards.length > 0;
 
   return (
     <div className="min-h-screen bg-[#FAF7F0] font-body">
@@ -412,58 +464,8 @@ export default function Index() {
             </span>
           </button>
 
-          <div className="hidden lg:flex items-center gap-5">
-            {CATEGORIES.slice(0, 5).map(cat => (
-              <button
-                key={cat.id}
-                onClick={() => scrollToCategory(cat.id)}
-                className={`nav-link text-sm font-body transition-colors ${activeCategory === cat.id ? "active text-[#2D6A4F] font-medium" : "text-[#6B7280] hover:text-[#2D6A4F]"}`}
-              >
-                {cat.label}
-              </button>
-            ))}
-          </div>
-
-          <div className="flex items-center gap-3">
-            <div className="relative hidden sm:block">
-              <Icon name="Search" size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-[#9CA3AF]" />
-              <input
-                type="text"
-                value={search}
-                onChange={e => setSearch(e.target.value)}
-                placeholder="Поиск..."
-                className="search-input pl-9 pr-4 py-2 text-sm font-body bg-[#F9F5EE] border border-[#E8D9B8] rounded-xl w-44 focus:w-60 transition-all duration-300 text-[#374151] placeholder:text-[#9CA3AF]"
-              />
-            </div>
-            <button className="lg:hidden p-2 rounded-lg hover:bg-[#F2EAD3]" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-              <Icon name={mobileMenuOpen ? "X" : "Menu"} size={22} className="text-[#2D6A4F]" />
-            </button>
-          </div>
+          <SectionsDropdown onSelect={scrollToCategory} />
         </div>
-
-        {mobileMenuOpen && (
-          <div className="lg:hidden bg-white border-t border-[#E8D9B8] px-4 py-3 space-y-1">
-            <div className="relative mb-3">
-              <Icon name="Search" size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-[#9CA3AF]" />
-              <input
-                type="text"
-                value={search}
-                onChange={e => setSearch(e.target.value)}
-                placeholder="Поиск маршрутов, традиций..."
-                className="search-input pl-9 pr-4 py-2 text-sm font-body bg-[#F9F5EE] border border-[#E8D9B8] rounded-xl w-full text-[#374151]"
-              />
-            </div>
-            {CATEGORIES.map(cat => (
-              <button
-                key={cat.id}
-                onClick={() => scrollToCategory(cat.id)}
-                className="w-full text-left px-3 py-2.5 rounded-lg text-sm font-body text-[#374151] hover:bg-[#F2EAD3] hover:text-[#2D6A4F] transition-colors flex items-center gap-2.5"
-              >
-                <span className="text-lg">{cat.emoji}</span> {cat.label}
-              </button>
-            ))}
-          </div>
-        )}
       </nav>
 
       {/* ══ HERO ══ */}
@@ -483,10 +485,7 @@ export default function Index() {
           }} />
         </div>
 
-        <TatarCorner className="absolute top-20 left-8 opacity-50" />
-        <TatarCorner className="absolute top-20 right-8 opacity-50 rotate-90" />
-        <TatarCorner className="absolute bottom-20 left-8 opacity-50 -rotate-90" />
-        <TatarCorner className="absolute bottom-20 right-8 opacity-50 rotate-180" />
+
 
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-16">
           <div
@@ -606,142 +605,41 @@ export default function Index() {
         </div>
       </section>
 
-      {/* ══ ORNAMENT ══ */}
-      <div className="bg-[#FAF7F0] py-3 px-8 border-y border-[#E8D9B8]">
-        <TatarOrnament />
-      </div>
-
-      {/* ══ CATEGORY NAV ══ */}
-      <section className="py-16 bg-[#FAF7F0]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <RevealDiv className="text-center mb-12">
-            <h2 className="font-display text-4xl sm:text-5xl font-bold text-[#1B4332] mb-3">
-              Разделы гида
-            </h2>
-            <p className="font-body text-[#9CA3AF] max-w-md mx-auto text-base">
-              Выберите тему для погружения в культуру Татарстана
-            </p>
-          </RevealDiv>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-3">
-            {CATEGORIES.map((cat, i) => (
-              <RevealDiv key={cat.id} delay={i * 55}>
-                <button
-                  onClick={() => scrollToCategory(cat.id)}
-                  className={`w-full flex flex-col items-center justify-center gap-2.5 rounded-2xl border-2 transition-all duration-300 py-5 px-3 group ${
-                    activeCategory === cat.id
-                      ? "bg-[#2D6A4F] border-[#2D6A4F] text-white shadow-lg shadow-[#2D6A4F]/25"
-                      : "bg-white border-[#E8D9B8] hover:border-[#C9A84C] hover:shadow-md"
-                  }`}
-                >
-                  <span className="text-2xl">{cat.emoji}</span>
-                  <span className={`text-xs font-body font-medium text-center leading-tight ${
-                    activeCategory === cat.id ? "text-white" : "text-[#374151]"
-                  }`}>
-                    {cat.label}
-                  </span>
-                </button>
-              </RevealDiv>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══ FILTERS STICKY ══ */}
-      <div className="sticky top-16 z-30 bg-white border-y border-[#E8D9B8] py-3">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row gap-3 items-start sm:items-center">
-          <div className="sm:hidden relative w-full">
-            <Icon name="Search" size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-[#9CA3AF]" />
-            <input
-              type="text"
-              value={search}
-              onChange={e => setSearch(e.target.value)}
-              placeholder="Поиск..."
-              className="search-input pl-8 pr-4 py-2 text-sm font-body bg-[#F9F5EE] border border-[#E8D9B8] rounded-xl w-full text-[#374151]"
-            />
-          </div>
-          <div className="flex items-center gap-2 flex-wrap">
-            <span className="text-xs font-body text-[#9CA3AF] flex items-center gap-1 flex-shrink-0">
-              <Icon name="Filter" size={13} /> Регион:
-            </span>
-            {REGIONS.map(r => (
-              <button
-                key={r}
-                onClick={() => setRegionFilter(r)}
-                className={`filter-chip text-xs font-body px-3 py-1.5 rounded-full border transition-all ${
-                  regionFilter === r
-                    ? "bg-[#2D6A4F] text-white border-[#2D6A4F]"
-                    : "bg-white text-[#374151] border-[#E8D9B8] hover:border-[#2D6A4F]"
-                }`}
-              >
-                {r}
-              </button>
-            ))}
-          </div>
-          {(search || regionFilter !== "Все регионы") && (
-            <button
-              onClick={() => { setSearch(""); setRegionFilter("Все регионы"); }}
-              className="text-xs font-body text-[#C9A84C] hover:text-[#9B7A2E] flex items-center gap-1 ml-auto flex-shrink-0"
-            >
-              <Icon name="X" size={12} /> Сбросить
-            </button>
-          )}
-        </div>
-      </div>
-
       {/* ══ MAIN CONTENT ══ */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
-        {!hasResults ? (
-          <div className="text-center py-24">
-            <div className="text-5xl mb-4">🔍</div>
-            <h3 className="font-display text-2xl text-[#1B4332] mb-2">Ничего не найдено</h3>
-            <p className="font-body text-[#9CA3AF] mb-5">Попробуйте изменить запрос или фильтры</p>
-            <button
-              onClick={() => { setSearch(""); setRegionFilter("Все регионы"); }}
-              className="bg-[#2D6A4F] text-white font-body font-medium px-6 py-2.5 rounded-xl hover:bg-[#1B4332] transition-colors"
+        {CATEGORIES.map((cat) => {
+          const cards = groupedCards[cat.id];
+          if (cards.length === 0) return null;
+          return (
+            <section
+              key={cat.id}
+              ref={el => { sectionRefs.current[cat.id] = el; }}
+              className="mb-20 scroll-mt-24"
             >
-              Сбросить фильтры
-            </button>
-          </div>
-        ) : (
-          CATEGORIES.map((cat) => {
-            const cards = groupedCards[cat.id];
-            if (cards.length === 0) return null;
-            return (
-              <section
-                key={cat.id}
-                ref={el => { sectionRefs.current[cat.id] = el; }}
-                className="mb-20 scroll-mt-36"
-              >
-                <RevealDiv className="flex items-center gap-4 mb-8">
-                  <div className="w-12 h-12 bg-[#2D6A4F] rounded-2xl flex items-center justify-center text-2xl flex-shrink-0 shadow-md shadow-[#2D6A4F]/20">
-                    {cat.emoji}
-                  </div>
-                  <div>
-                    <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#1B4332] gold-underline pb-1">
-                      {cat.label}
-                    </h2>
-                    <p className="font-body text-sm text-[#9CA3AF] mt-3">
-                      {cards.length} {cards.length === 1 ? "объект" : cards.length < 5 ? "объекта" : "объектов"}
-                    </p>
-                  </div>
-                </RevealDiv>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-                  {cards.map((card, i) => (
-                    <RevealDiv key={card.id} delay={i * 70}>
-                      <ContentCard card={card} onOpen={setModalCard} />
-                    </RevealDiv>
-                  ))}
+              <RevealDiv className="flex items-center gap-4 mb-8">
+                <div className="w-12 h-12 bg-[#2D6A4F] rounded-2xl flex items-center justify-center text-2xl flex-shrink-0 shadow-md shadow-[#2D6A4F]/20">
+                  {cat.emoji}
                 </div>
-              </section>
-            );
-          })
-        )}
+                <div>
+                  <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#1B4332] gold-underline pb-1">
+                    {cat.label}
+                  </h2>
+                  <p className="font-body text-sm text-[#9CA3AF] mt-3">
+                    {cards.length} {cards.length === 1 ? "объект" : cards.length < 5 ? "объекта" : "объектов"}
+                  </p>
+                </div>
+              </RevealDiv>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+                {cards.map((card, i) => (
+                  <RevealDiv key={card.id} delay={i * 70}>
+                    <ContentCard card={card} onOpen={setModalCard} />
+                  </RevealDiv>
+                ))}
+              </div>
+            </section>
+          );
+        })}
       </main>
-
-      {/* ══ ORNAMENT ══ */}
-      <div className="bg-[#F2EAD3] py-3 px-8 border-y border-[#E8D9B8]">
-        <TatarOrnament />
-      </div>
 
       {/* ══ FOOTER ══ */}
       <footer className="bg-[#1B4332] text-white py-12">
