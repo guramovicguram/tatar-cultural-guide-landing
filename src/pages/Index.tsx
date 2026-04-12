@@ -506,6 +506,142 @@ function ReviewItem({ review, index }: { review: ReviewData; index: number }) {
   );
 }
 
+const SIDEBAR_NAV = [
+  { id: "routes",     label: "Виртуальные маршруты",  emoji: "🗺️" },
+  { id: "heritage",   label: "Достопримечательности",  emoji: "🏛️" },
+  { id: "traditions", label: "Традиции",               emoji: "🌿" },
+  { id: "rituals",    label: "Обряды",                 emoji: "✨" },
+  { id: "holidays",   label: "Национальные праздники", emoji: "🎉" },
+  { id: "people",     label: "Выдающиеся личности",    emoji: "👤" },
+  { id: "dates",      label: "Памятные даты",          emoji: "📅" },
+  { id: "heritage2",  label: "Объекты наследия",       emoji: "🏺" },
+  { id: "cuisine",    label: "Национальная кухня",     emoji: "🍽️" },
+  { id: "quest",      label: "Интерактив / квест",     emoji: "🎮" },
+];
+
+const SIDEBAR_EXTRA = [
+  { id: "faq",      label: "Часто задаваемые вопросы", emoji: "❓" },
+  { id: "reviews",  label: "Отзывы",                   emoji: "⭐" },
+  { id: "feedback", label: "Обратная связь",            emoji: "✉️" },
+];
+
+function Sidebar({ open, onClose, onSelect }: { open: boolean; onClose: () => void; onSelect: (id: string) => void }) {
+  useEffect(() => {
+    if (open) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "";
+    return () => { document.body.style.overflow = ""; };
+  }, [open]);
+
+  const handleNav = (id: string) => {
+    onSelect(id);
+    onClose();
+  };
+
+  return (
+    <>
+      {/* Overlay */}
+      <div
+        onClick={onClose}
+        className="fixed inset-0 z-50 transition-opacity duration-300"
+        style={{
+          background: "rgba(10,28,18,0.55)",
+          backdropFilter: "blur(3px)",
+          opacity: open ? 1 : 0,
+          pointerEvents: open ? "auto" : "none",
+        }}
+      />
+
+      {/* Panel */}
+      <aside
+        className="fixed top-0 left-0 h-full z-50 w-[300px] max-w-[85vw] bg-white flex flex-col shadow-2xl"
+        style={{
+          transform: open ? "translateX(0)" : "translateX(-100%)",
+          transition: "transform 0.32s cubic-bezier(0.16,1,0.3,1)",
+          borderRadius: "0 20px 20px 0",
+        }}
+      >
+        {/* Header */}
+        <div className="flex items-center justify-between px-5 py-4 border-b border-[#F2EAD3]">
+          <button
+            onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); onClose(); }}
+            className="flex items-center gap-2.5 group"
+          >
+            <div className="w-9 h-9 bg-[#2D6A4F] rounded-xl flex items-center justify-center flex-shrink-0">
+              <span className="text-[#E8C97A] font-display font-bold text-base">Т</span>
+            </div>
+            <span className="font-display text-lg font-semibold text-[#1B4332] group-hover:text-[#2D6A4F] transition-colors">
+              Гид Татарстана
+            </span>
+          </button>
+          <button
+            onClick={onClose}
+            className="w-8 h-8 rounded-full flex items-center justify-center hover:bg-[#F2EAD3] transition-colors"
+          >
+            <Icon name="X" size={18} className="text-[#6B7280]" />
+          </button>
+        </div>
+
+        {/* Scrollable body */}
+        <div className="flex-1 overflow-y-auto">
+          {/* Auth block */}
+          <div className="px-4 py-4 border-b border-[#F2EAD3] space-y-2">
+            <p className="text-xs font-body text-[#9CA3AF] px-1 mb-2 uppercase tracking-wider">Войти через</p>
+            <button className="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl border border-[#E8D9B8] hover:bg-[#FFF9F0] hover:border-[#F4A234] transition-all group">
+              <span className="text-xl">🟡</span>
+              <span className="font-body font-medium text-sm text-[#374151] group-hover:text-[#B85C00]">Войти через Яндекс</span>
+            </button>
+            <button className="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl border border-[#E8D9B8] hover:bg-[#F0F6FF] hover:border-[#4285F4] transition-all group">
+              <span className="text-xl">🔵</span>
+              <span className="font-body font-medium text-sm text-[#374151] group-hover:text-[#1A73E8]">Войти через Google</span>
+            </button>
+          </div>
+
+          {/* Main nav */}
+          <div className="px-4 py-4 border-b border-[#F2EAD3]">
+            <p className="text-xs font-body text-[#9CA3AF] px-1 mb-2 uppercase tracking-wider">Разделы</p>
+            <nav className="space-y-0.5">
+              {SIDEBAR_NAV.map(item => (
+                <button
+                  key={item.id}
+                  onClick={() => handleNav(item.id)}
+                  className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-left hover:bg-[#F2EAD3] hover:text-[#1B4332] text-[#374151] transition-colors group"
+                >
+                  <span className="text-base w-6 text-center">{item.emoji}</span>
+                  <span className="font-body text-sm font-medium flex-1">{item.label}</span>
+                  <Icon name="ChevronRight" size={14} className="text-[#C9A84C] opacity-0 group-hover:opacity-100 transition-opacity" />
+                </button>
+              ))}
+            </nav>
+          </div>
+
+          {/* Extra links */}
+          <div className="px-4 py-4">
+            <p className="text-xs font-body text-[#9CA3AF] px-1 mb-2 uppercase tracking-wider">Дополнительно</p>
+            <nav className="space-y-0.5">
+              {SIDEBAR_EXTRA.map(item => (
+                <button
+                  key={item.id}
+                  onClick={() => handleNav(item.id)}
+                  className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-left hover:bg-[#F2EAD3] hover:text-[#1B4332] text-[#374151] transition-colors group"
+                >
+                  <span className="text-base w-6 text-center">{item.emoji}</span>
+                  <span className="font-body text-sm font-medium flex-1">{item.label}</span>
+                  <Icon name="ChevronRight" size={14} className="text-[#C9A84C] opacity-0 group-hover:opacity-100 transition-opacity" />
+                </button>
+              ))}
+            </nav>
+          </div>
+        </div>
+
+        {/* Footer */}
+        <div className="px-5 py-4 border-t border-[#F2EAD3]">
+          <p className="font-body text-xs text-[#9CA3AF] text-center">© 2026 Гид Татарстана</p>
+        </div>
+      </aside>
+    </>
+  );
+}
+
 function SectionsDropdown({ onSelect }: { onSelect: (id: string) => void }) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -568,9 +704,17 @@ function SectionsDropdown({ onSelect }: { onSelect: (id: string) => void }) {
 export default function Index() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [modalCard, setModalCard] = useState<CardData | null>(null);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
 
   const scrollToCategory = (id: string) => {
+    const sectionIds = ["faq", "reviews", "feedback"];
+    if (sectionIds.includes(id)) {
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 50);
+      return;
+    }
     setActiveCategory(id);
     setTimeout(() => {
       sectionRefs.current[id]?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -585,20 +729,34 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-[#FAF7F0] font-body">
 
+      <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} onSelect={scrollToCategory} />
+
       {/* ══ NAVBAR ══ */}
       <nav className="fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-b border-[#E8D9B8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="flex items-center gap-2.5"
-          >
-            <div className="w-8 h-8 bg-[#2D6A4F] rounded-lg flex items-center justify-center">
-              <span className="text-[#E8C97A] text-sm font-bold font-display">Т</span>
-            </div>
-            <span className="font-display text-lg font-semibold text-[#1B4332] hidden sm:block">
-              Гид Татарстана
-            </span>
-          </button>
+          {/* Left: burger + logo */}
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => setSidebarOpen(true)}
+              className="w-9 h-9 flex flex-col items-center justify-center gap-1.5 rounded-xl hover:bg-[#F2EAD3] transition-colors group"
+              aria-label="Открыть меню"
+            >
+              <span className="w-5 h-0.5 bg-[#2D6A4F] rounded-full transition-all group-hover:bg-[#C9A84C]" />
+              <span className="w-5 h-0.5 bg-[#2D6A4F] rounded-full transition-all group-hover:bg-[#C9A84C]" />
+              <span className="w-3.5 h-0.5 bg-[#2D6A4F] rounded-full transition-all group-hover:bg-[#C9A84C] self-start ml-0" />
+            </button>
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="flex items-center gap-2 group"
+            >
+              <div className="w-8 h-8 bg-[#2D6A4F] rounded-lg flex items-center justify-center">
+                <span className="text-[#E8C97A] text-sm font-bold font-display">Т</span>
+              </div>
+              <span className="font-display text-lg font-semibold text-[#1B4332] hidden sm:block group-hover:text-[#2D6A4F] transition-colors">
+                Гид Татарстана
+              </span>
+            </button>
+          </div>
 
           <SectionsDropdown onSelect={scrollToCategory} />
         </div>
