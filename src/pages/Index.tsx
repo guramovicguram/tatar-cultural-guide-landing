@@ -7,6 +7,7 @@ const DROPDOWN_ITEMS = [
   { id: "dates", label: "Памятные даты", emoji: "📅" },
   { id: "holidays", label: "Праздники", emoji: "🎉" },
   { id: "traditions", label: "Традиции", emoji: "🌿" },
+  { id: "cuisine", label: "Национальная кухня", emoji: "🍽️" },
 ];
 
 const CATEGORIES = [
@@ -17,6 +18,7 @@ const CATEGORIES = [
   { id: "people", label: "Выдающиеся личности", icon: "User", emoji: "👤" },
   { id: "dates", label: "Памятные даты", icon: "Calendar", emoji: "📅" },
   { id: "heritage", label: "Объекты наследия", icon: "Building2", emoji: "🏛️" },
+  { id: "cuisine", label: "Национальная кухня", icon: "UtensilsCrossed", emoji: "🍽️" },
 ];
 
 const ALL_CARDS = [
@@ -181,6 +183,51 @@ const ALL_CARDS = [
     tags: ["Музыка", "Духовность"],
     panorama: "",
     image: "https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=600&q=80"
+  },
+  {
+    id: 19, category: "cuisine", region: "Весь Татарстан",
+    title: "Чак-чак",
+    desc: "Главный татарский десерт — обжаренное тесто, политое горячим мёдом. Подаётся на свадьбах и праздниках, символизирует счастье и достаток.",
+    period: "Традиция",
+    tags: ["Десерт", "Мёд"],
+    panorama: "",
+    image: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&q=80"
+  },
+  {
+    id: 20, category: "cuisine", region: "Весь Татарстан",
+    title: "Эчпочмак",
+    desc: "Треугольные пирожки с начинкой из мяса, картофеля и лука. Название переводится как «три угла» — визитная карточка татарской выпечки.",
+    period: "Традиция",
+    tags: ["Выпечка", "Мясо"],
+    panorama: "",
+    image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80"
+  },
+  {
+    id: 21, category: "cuisine", region: "Весь Татарстан",
+    title: "Казылык",
+    desc: "Традиционная татарская вяленая колбаса из конины. Заготавливалась на зиму, высоко ценилась за питательность и насыщенный вкус.",
+    period: "Традиция",
+    tags: ["Мясо", "Конина"],
+    panorama: "",
+    image: "https://images.unsplash.com/photo-1551248429-40975aa4de74?w=600&q=80"
+  },
+  {
+    id: 22, category: "cuisine", region: "Весь Татарстан",
+    title: "Губадия",
+    desc: "Многослойный праздничный пирог с рисом, яйцом, изюмом и мясом. Подаётся на особых торжествах — настоящий гастрономический шедевр.",
+    period: "Традиция",
+    tags: ["Пирог", "Праздник"],
+    panorama: "",
+    image: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&q=80"
+  },
+  {
+    id: 23, category: "cuisine", region: "Весь Татарстан",
+    title: "Катык и корт",
+    desc: "Катык — густой кисломолочный напиток, корт — сушёный творог. Основа татарского стола: освежают летом и питают в дальней дороге.",
+    period: "Традиция",
+    tags: ["Молочное", "Напитки"],
+    panorama: "",
+    image: "https://images.unsplash.com/photo-1563636619-e9143da7973b?w=600&q=80"
   },
 ];
 
@@ -367,6 +414,95 @@ function Modal({ card, onClose }: { card: CardData; onClose: () => void }) {
         </div>
       </div>
     </div>
+  );
+}
+
+function FaqItem({ question, answer, index }: { question: string; answer: string; index: number }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <RevealDiv delay={index * 60}>
+      <div
+        className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
+          open ? "border-[#C9A84C] shadow-md shadow-[#C9A84C]/10" : "border-[#E8D9B8] hover:border-[#C9A84C]/50"
+        } bg-white`}
+      >
+        <button
+          onClick={() => setOpen(v => !v)}
+          className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left group"
+        >
+          <span className="font-body font-semibold text-[#1B4332] text-base leading-snug">{question}</span>
+          <span className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-all duration-300 ${
+            open ? "bg-[#C9A84C] rotate-180" : "bg-[#F2EAD3] group-hover:bg-[#E8D9B8]"
+          }`}>
+            <Icon name="ChevronDown" size={15} className={open ? "text-white" : "text-[#6B7280]"} />
+          </span>
+        </button>
+        <div
+          style={{
+            maxHeight: open ? "400px" : "0",
+            opacity: open ? 1 : 0,
+            transition: "max-height 0.35s cubic-bezier(0.16,1,0.3,1), opacity 0.25s ease",
+            overflow: "hidden",
+          }}
+        >
+          <p className="px-6 pb-5 font-body text-[#4B5563] leading-relaxed text-sm">{answer}</p>
+        </div>
+      </div>
+    </RevealDiv>
+  );
+}
+
+interface ReviewData {
+  name: string; city: string; rating: number; short: string; full: string;
+}
+
+function ReviewItem({ review, index }: { review: ReviewData; index: number }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <RevealDiv delay={index * 80}>
+      <div
+        onClick={() => setOpen(v => !v)}
+        className={`rounded-2xl border cursor-pointer transition-all duration-300 overflow-hidden ${
+          open ? "border-[#2D6A4F] shadow-lg shadow-[#2D6A4F]/10" : "border-[#E8D9B8] hover:border-[#2D6A4F]/40 hover:shadow-md"
+        } bg-white`}
+      >
+        <div className="px-6 py-5 flex items-start gap-4">
+          {/* Avatar */}
+          <div className="w-11 h-11 rounded-full bg-gradient-to-br from-[#2D6A4F] to-[#C9A84C] flex items-center justify-center flex-shrink-0 text-white font-display font-bold text-lg">
+            {review.name[0]}
+          </div>
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center justify-between gap-2 mb-1">
+              <div>
+                <span className="font-body font-semibold text-[#1B4332] text-sm">{review.name}</span>
+                <span className="font-body text-xs text-[#9CA3AF] ml-2">{review.city}</span>
+              </div>
+              <div className="flex gap-0.5 flex-shrink-0">
+                {Array.from({ length: review.rating }).map((_, i) => (
+                  <span key={i} className="text-[#C9A84C] text-sm">★</span>
+                ))}
+              </div>
+            </div>
+            <p className="font-body text-[#4B5563] text-sm leading-relaxed">{review.short}</p>
+          </div>
+          <span className={`flex-shrink-0 mt-1 transition-transform duration-300 ${open ? "rotate-180" : ""}`}>
+            <Icon name="ChevronDown" size={16} className="text-[#9CA3AF]" />
+          </span>
+        </div>
+        <div
+          style={{
+            maxHeight: open ? "500px" : "0",
+            opacity: open ? 1 : 0,
+            transition: "max-height 0.4s cubic-bezier(0.16,1,0.3,1), opacity 0.25s ease",
+            overflow: "hidden",
+          }}
+        >
+          <div className="px-6 pb-5 border-t border-[#F2EAD3] pt-4">
+            <p className="font-body text-[#374151] text-sm leading-relaxed">{review.full}</p>
+          </div>
+        </div>
+      </div>
+    </RevealDiv>
   );
 }
 
@@ -640,6 +776,101 @@ export default function Index() {
           );
         })}
       </main>
+
+      {/* ══ FAQ ══ */}
+      <section id="faq" className="py-20 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6">
+          <RevealDiv className="text-center mb-12">
+            <h2 className="font-display text-4xl sm:text-5xl font-bold text-[#1B4332] mb-3">
+              Часто задаваемые вопросы
+            </h2>
+            <p className="font-body text-[#9CA3AF]">Ответы на самые популярные вопросы о культуре и путешествиях по Татарстану</p>
+          </RevealDiv>
+          <div className="space-y-3">
+            {[
+              {
+                q: "Как добраться до Казани?",
+                a: "Казань имеет международный аэропорт с прямыми рейсами из Москвы, Санкт-Петербурга и других городов. Также можно добраться поездом — от Москвы около 11 часов, от Екатеринбурга около 7 часов. Из Москвы ходят ночные поезда, что очень удобно."
+              },
+              {
+                q: "В какое время года лучше всего посещать Татарстан?",
+                a: "Лучшее время — с мая по сентябрь. Главный праздник Сабантуй проходит в июне, это уникальная возможность увидеть народные гуляния. Летом работают все музеи и объекты ЮНЕСКО. Зима тоже красива — заснеженный Кремль и татарская кухня создают особую атмосферу."
+              },
+              {
+                q: "Что обязательно попробовать из татарской кухни?",
+                a: "Обязательно попробуйте чак-чак (медовый десерт), эчпочмак (треугольные пирожки с мясом и картофелем), губадию (многослойный пирог), казылык (вяленая конина) и катык (кисломолочный напиток). В Казани много хороших ресторанов татарской кухни, а лучшую выпечку найдёте на местных рынках."
+              },
+              {
+                q: "Нужно ли знать татарский язык для путешествия?",
+                a: "Нет, татарский язык не обязателен. Все жители Татарстана свободно говорят по-русски. Однако несколько слов на татарском — «рәхмәт» (спасибо) и «сәлам» (привет) — будут приняты с искренней радостью и теплом."
+              },
+              {
+                q: "Можно ли посетить Болгар и Свияжск за один день?",
+                a: "Каждый объект требует отдельного дня. Болгар находится в 200 км от Казани — туда ходят теплоходы по Волге (очень живописный маршрут) или можно доехать на автобусе. Свияжск — в 60 км, туда проще добраться на машине или организованной экскурсии."
+              },
+              {
+                q: "Есть ли в Татарстане объекты ЮНЕСКО?",
+                a: "Да, целых два: Казанский Кремль (с 2000 года) и Болгарский историко-архитектурный комплекс вместе с островом-градом Свияжском (с 2017 года). Это делает Татарстан одним из богатейших регионов России по концентрации объектов всемирного наследия."
+              },
+            ].map((item, i) => (
+              <FaqItem key={i} question={item.q} answer={item.a} index={i} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══ REVIEWS ══ */}
+      <section id="reviews" className="py-20 bg-[#FAF7F0]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <RevealDiv className="text-center mb-12">
+            <h2 className="font-display text-4xl sm:text-5xl font-bold text-[#1B4332] mb-3">
+              Отзывы
+            </h2>
+            <p className="font-body text-[#9CA3AF]">Что говорят те, кто уже открыл для себя Татарстан</p>
+          </RevealDiv>
+          <div className="space-y-4">
+            {[
+              {
+                name: "Анна Соколова",
+                city: "Москва",
+                rating: 5,
+                short: "Потрясающее путешествие! Казань покорила с первого взгляда.",
+                full: "Мы приехали на три дня и остались на неделю. Казанский Кремль — это нечто невероятное: мечеть Кул-Шариф и православный собор стоят рядом, символизируя многовековое единство культур. Татарская кухня — отдельная история: чак-чак, эчпочмак, казылык — всё вкусно до невозможности. Обязательно вернёмся на Сабантуй!"
+              },
+              {
+                name: "Дмитрий Орлов",
+                city: "Санкт-Петербург",
+                rating: 5,
+                short: "Свияжск — место вне времени. Обязательно к посещению.",
+                full: "Остров-град Свияжск произвёл на меня неизгладимое впечатление. Тишина, монастыри XVI века, Волга вокруг — ощущение полного отрыва от современности. Фрески Успенского собора признаны одними из лучших в России. Дорога туда на теплоходе — уже отдельное удовольствие. Рекомендую всем любителям истории."
+              },
+              {
+                name: "Лейла Гарипова",
+                city: "Уфа",
+                rating: 5,
+                short: "Для меня как для татарки это был особенный визит домой.",
+                full: "Я выросла в Уфе и давно хотела лучше узнать историю своего народа. Болгарский комплекс — место принятия ислама волжскими булгарами в 922 году — произвёл глубокое духовное впечатление. Белая мечеть, Чёрная палата, музей болгарской цивилизации — всё выполнено на высочайшем уровне. Этот гид помог мне подготовиться к поездке заранее."
+              },
+              {
+                name: "Кристоф Майер",
+                city: "Берлин (Германия)",
+                rating: 5,
+                short: "Kazan is a hidden gem of Russia — absolutely stunning!",
+                full: "I visited Kazan during my trip across Russia and it was the highlight of my journey. The blend of Islamic and Orthodox architecture is unique in the world. The people were incredibly welcoming, and the food was outstanding. I especially loved learning about Tatar traditions and history through local museums. This cultural guide helped me discover places I would never have found on my own."
+              },
+              {
+                name: "Марина Белова",
+                city: "Екатеринбург",
+                rating: 4,
+                short: "Богатая культура, гостеприимные люди и вкуснейшая кухня.",
+                full: "Приехала на конференцию, осталась туристом. За три свободных дня успела посетить Кремль, Старо-Татарскую слободу, несколько музеев и попробовать всю татарскую кухню. Особенно запомнилась губадия в одном маленьком семейном ресторанчике — такого больше нигде не ела. Казань — один из самых недооценённых городов России."
+              },
+            ].map((review, i) => (
+              <ReviewItem key={i} review={review} index={i} />
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ══ FOOTER ══ */}
       <footer className="bg-[#1B4332] text-white py-12">
