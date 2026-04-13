@@ -708,7 +708,7 @@ export default function Index() {
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
 
   const scrollToCategory = (id: string) => {
-    const sectionIds = ["faq", "reviews", "feedback"];
+    const sectionIds = ["faq", "reviews", "feedback", "about"];
     if (sectionIds.includes(id)) {
       setTimeout(() => {
         document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -758,7 +758,27 @@ export default function Index() {
             </button>
           </div>
 
-          <SectionsDropdown onSelect={scrollToCategory} />
+          <div className="flex items-center gap-1">
+            <SectionsDropdown onSelect={scrollToCategory} />
+            <button
+              onClick={() => scrollToCategory("about")}
+              className="hidden md:flex items-center px-4 py-2 rounded-xl font-body font-medium text-sm text-[#1B4332] hover:bg-[#F2EAD3] hover:text-[#2D6A4F] transition-colors"
+            >
+              О проекте
+            </button>
+            <button
+              onClick={() => scrollToCategory("reviews")}
+              className="hidden md:flex items-center px-4 py-2 rounded-xl font-body font-medium text-sm text-[#1B4332] hover:bg-[#F2EAD3] hover:text-[#2D6A4F] transition-colors"
+            >
+              Отзывы
+            </button>
+            <button
+              onClick={() => scrollToCategory("feedback")}
+              className="hidden md:flex items-center px-4 py-2 rounded-xl font-body font-medium text-sm text-[#1B4332] hover:bg-[#F2EAD3] hover:text-[#2D6A4F] transition-colors"
+            >
+              Обратная связь
+            </button>
+          </div>
         </div>
       </nav>
 
