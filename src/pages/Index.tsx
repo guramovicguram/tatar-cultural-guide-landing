@@ -852,49 +852,47 @@ export default function Index() {
       <section id="about" className="py-20 bg-white relative">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A84C] to-transparent" />
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <RevealDiv className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-flex items-center gap-2 bg-[#F2EAD3] rounded-full px-4 py-1.5 mb-6">
-                <Icon name="Landmark" size={13} className="text-[#C9A84C]" />
-                <span className="text-sm font-body text-[#6B4226] font-medium">О проекте</span>
-              </div>
-              <h2 className="font-display text-4xl font-bold text-[#1B4332] mb-8 gold-underline">
-                Откройте Татарстан заново
-              </h2>
-              <div className="space-y-4 font-body text-[#4B5563] leading-relaxed">
-                <p>
-                  Татарстан — уникальный регион, где на протяжении веков мирно уживаются
-                  татарская, русская, чувашская, марийская и многие другие культуры.
-                </p>
-                <p>
-                  Наш проект — интерактивная энциклопедия культурного наследия республики.
-                  Виртуальные маршруты с 360° панорамами, рассказы о традициях и обрядах,
-                  портреты выдающихся деятелей и история памятных дат.
-                </p>
-                <p className="text-[#2D6A4F] font-semibold">
-                  Путешествуйте, не выходя из дома — или готовьтесь к настоящей поездке.
-                </p>
-              </div>
+          <RevealDiv className="max-w-3xl mx-auto text-center mb-12">
+            <div className="inline-flex items-center gap-2 bg-[#F2EAD3] rounded-full px-4 py-1.5 mb-6">
+              <Icon name="Landmark" size={13} className="text-[#C9A84C]" />
+              <span className="text-sm font-body text-[#6B4226] font-medium">О проекте</span>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { icon: "Map", label: "Виртуальные маршруты", desc: "360° панорамы локаций" },
-                { icon: "BookOpen", label: "Культура и традиции", desc: "Живая история народов" },
-                { icon: "Search", label: "Умный поиск", desc: "По всему контенту" },
-                { icon: "Users", label: "Личности", desc: "Выдающиеся деятели" },
-              ].map((f, i) => (
-                <RevealDiv key={f.label} delay={i * 80}>
-                  <div className="bg-[#FAF7F0] rounded-2xl p-4 border border-[#E8D9B8] hover:border-[#C9A84C] transition-colors group h-full">
-                    <div className="w-10 h-10 bg-[#2D6A4F] group-hover:bg-[#C9A84C] rounded-xl flex items-center justify-center mb-3 transition-colors">
-                      <Icon name={f.icon} size={17} className="text-white" />
-                    </div>
-                    <div className="font-display text-base font-semibold text-[#1B4332] mb-1">{f.label}</div>
-                    <div className="text-xs font-body text-[#9CA3AF]">{f.desc}</div>
-                  </div>
-                </RevealDiv>
-              ))}
+            <h2 className="font-display text-4xl font-bold text-[#1B4332] mb-8 gold-underline">
+              Откройте Татарстан заново
+            </h2>
+            <div className="space-y-4 font-body text-[#4B5563] leading-relaxed text-lg text-left">
+              <p>
+                Татарстан — уникальный регион, где на протяжении веков мирно уживаются
+                татарская, русская, чувашская, марийская и многие другие культуры.
+              </p>
+              <p>
+                Наш проект — интерактивная энциклопедия культурного наследия республики.
+                Виртуальные маршруты с 360° панорамами, рассказы о традициях и обрядах,
+                портреты выдающихся деятелей и история памятных дат.
+              </p>
+              <p className="text-[#2D6A4F] font-semibold">
+                Путешествуйте, не выходя из дома — или готовьтесь к настоящей поездке.
+              </p>
             </div>
           </RevealDiv>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              { icon: "Map", label: "Виртуальные маршруты", desc: "360° панорамы локаций" },
+              { icon: "BookOpen", label: "Культура и традиции", desc: "Живая история народов" },
+              { icon: "Search", label: "Умный поиск", desc: "По всему контенту" },
+              { icon: "Users", label: "Личности", desc: "Выдающиеся деятели" },
+            ].map((f, i) => (
+              <RevealDiv key={f.label} delay={i * 80}>
+                <div className="bg-[#FAF7F0] rounded-3xl p-7 border border-[#E8D9B8] hover:border-[#C9A84C] hover:shadow-lg transition-all group h-full flex flex-col items-center text-center">
+                  <div className="w-16 h-16 bg-[#2D6A4F] group-hover:bg-[#C9A84C] rounded-2xl flex items-center justify-center mb-4 transition-colors shadow-md">
+                    <Icon name={f.icon} size={28} className="text-white" />
+                  </div>
+                  <div className="font-display text-xl font-semibold text-[#1B4332] mb-2">{f.label}</div>
+                  <div className="text-sm font-body text-[#9CA3AF]">{f.desc}</div>
+                </div>
+              </RevealDiv>
+            ))}
+          </div>
         </div>
       </section>
 
