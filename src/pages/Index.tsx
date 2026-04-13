@@ -794,17 +794,16 @@ export default function Index() {
             className="font-display text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-[1.1] mb-6"
             style={{ animation: "fade-up 0.7s 0.12s ease-out forwards", opacity: 0 }}
           >
-            Виртуальный гид<br/>
-            <em className="text-[#E8C97A] not-italic">по культуре</em><br/>
-            Татарстана
+            Культура<br/>
+            <em className="text-[#E8C97A] not-italic">Республики</em><br/>
+            Татарстан
           </h1>
 
           <p
             className="font-body text-lg sm:text-xl text-white/75 max-w-2xl mx-auto mb-10 leading-relaxed"
             style={{ animation: "fade-up 0.7s 0.24s ease-out forwards", opacity: 0 }}
           >
-            Откройте многонациональную культуру, вековые традиции и духовное наследие
-            народов Татарстана — интерактивные маршруты, 360° панорамы и живая история
+            Откройте для себя богатое многонациональное наследие Республики Татарстан — от древних традиций и обрядов до современных культурных достижений. Погрузитесь в атмосферу истории, искусства и единства народов через интерактивные маршруты и уникальные объекты.
           </p>
 
           <div
