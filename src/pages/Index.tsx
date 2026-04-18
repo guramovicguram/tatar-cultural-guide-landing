@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import Icon from "@/components/ui/icon";
 
 const DROPDOWN_ITEMS = [
@@ -702,6 +703,7 @@ function SectionsDropdown({ onSelect }: { onSelect: (id: string) => void }) {
 }
 
 export default function Index() {
+  const navigate = useNavigate();
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [modalCard, setModalCard] = useState<CardData | null>(null);
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -921,6 +923,76 @@ export default function Index() {
         {CATEGORIES.map((cat) => {
           const cards = groupedCards[cat.id];
           if (cards.length === 0) return null;
+
+          /* ── Virtual Routes: show only Казань city card ── */
+          if (cat.id === "routes") {
+            return (
+              <section
+                key={cat.id}
+                ref={el => { sectionRefs.current[cat.id] = el; }}
+                className="mb-20 scroll-mt-24"
+              >
+                <RevealDiv className="flex items-center gap-4 mb-8">
+                  <div className="w-12 h-12 bg-[#2D6A4F] rounded-2xl flex items-center justify-center text-2xl flex-shrink-0 shadow-md shadow-[#2D6A4F]/20">
+                    {cat.emoji}
+                  </div>
+                  <div>
+                    <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#1B4332] gold-underline pb-1">
+                      {cat.label}
+                    </h2>
+                    <p className="font-body text-sm text-[#9CA3AF] mt-3">
+                      Выберите город для путешествия
+                    </p>
+                  </div>
+                </RevealDiv>
+                <RevealDiv>
+                  <button
+                    onClick={() => navigate("/kazan")}
+                    className="group relative rounded-3xl overflow-hidden border border-[#E8D9B8] hover:border-[#C9A84C] hover:shadow-2xl hover:shadow-[#C9A84C]/15 transition-all duration-300 bg-white w-full sm:w-96 text-left"
+                  >
+                    <div className="relative h-56 overflow-hidden">
+                      <img
+                        src="https://images.unsplash.com/photo-1596484552834-6a58f850e0a1?w=800&q=80"
+                        alt="Казань"
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).src = "https://placehold.co/800x400/2D6A4F/FAF7F0?text=Казань";
+                        }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
+                      <div className="absolute bottom-4 left-4 flex gap-2">
+                        {["ЮНЕСКО", "1000 лет", "Маршруты"].map(t => (
+                          <span key={t} className="bg-white/20 backdrop-blur-sm text-white text-xs px-2 py-0.5 rounded-full">
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="p-5">
+                      <div className="flex items-start justify-between gap-3">
+                        <div>
+                          <p className="text-xs font-body text-[#C9A84C] font-semibold mb-1">Столица Татарстана</p>
+                          <h3 className="font-display text-2xl font-bold text-[#1B4332] mb-2">Казань</h3>
+                          <p className="font-body text-sm text-[#6B7280] leading-relaxed">
+                            Виртуальные прогулки по историческому центру: Кремль, Старо-Татарская слобода и другие знаковые места.
+                          </p>
+                        </div>
+                        <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#2D6A4F] group-hover:bg-[#C9A84C] transition-colors flex items-center justify-center shadow-md mt-1">
+                          <Icon name="ArrowRight" size={18} className="text-white" />
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-4 mt-4 pt-3 border-t border-[#F2EAD3] text-xs text-[#9CA3AF] font-body">
+                        <span className="flex items-center gap-1"><Icon name="MapPin" size={11} />1 маршрут доступен</span>
+                        <span className="flex items-center gap-1"><Icon name="Eye" size={11} />10 точек</span>
+                        <span className="flex items-center gap-1"><Icon name="Map" size={11} />Яндекс.Карта</span>
+                      </div>
+                    </div>
+                  </button>
+                </RevealDiv>
+              </section>
+            );
+          }
+
           return (
             <section
               key={cat.id}
