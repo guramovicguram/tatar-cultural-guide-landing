@@ -8,34 +8,34 @@ const KAZAN_ROUTES = [
     title: "Казанский Кремль",
     subtitle: "Объект Всемирного наследия ЮНЕСКО",
     desc: "Белокаменная крепость с мечетью Кул-Шариф, Благовещенским собором и башней Сеюмбике. 10 ключевых объектов с интерактивной картой и панорамными видами.",
-    points: 10,
+    points: 11,
     duration: "2–3 часа",
     tags: ["ЮНЕСКО", "Архитектура", "История"],
-    image: "https://images.unsplash.com/photo-1596484552834-6a58f850e0a1?w=800&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/8/82/A_view_from_Kazan_Kremlin.JPG",
     available: true,
   },
   {
     id: "sloboda",
-    path: "#",
+    path: "/kazan/sloboda",
     title: "Старо-Татарская слобода",
     subtitle: "Исторический квартал XIX века",
-    desc: "Мечети, купеческие дома и музеи — живое свидетельство татарской купеческой культуры. Скоро доступно.",
-    points: 8,
+    desc: "Мечети, купеческие дома и музеи — живое свидетельство татарской купеческой культуры.",
+    points: 18,
     duration: "1,5–2 часа",
     tags: ["История", "Архитектура"],
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
-    available: false,
+    image: "https://avatars.mds.yandex.net/i?id=01750a758f69e638972b27ab383f2abd2325146a-3826599-images-thumbs&n=13",
+    available: true,
   },
   {
     id: "bauman",
     path: "#",
     title: "Улица Баумана",
     subtitle: "Главная пешеходная улица Казани",
-    desc: "«Казанский Арбат» — пешеходная улица с театрами, кафе и историческими памятниками в центре города. Скоро доступно.",
+    desc: "«Казанский Арбат» — пешеходная улица с театрами, кафе и историческими памятниками в центре города.",
     points: 7,
     duration: "1–1,5 часа",
     tags: ["Прогулка", "Центр"],
-    image: "https://images.unsplash.com/photo-1467912407355-245f30185020?w=800&q=80",
+    image: "https://cdn.culture.ru/images/21ed8406-263d-5341-8f40-8cb1e41f4124",
     available: false,
   },
 ];
@@ -61,11 +61,13 @@ export default function Kazan() {
             onClick={() => navigate("/")}
             className="flex items-center gap-2 group"
           >
-            <div className="w-8 h-8 bg-[#2D6A4F] rounded-lg flex items-center justify-center">
-              <span className="text-[#E8C97A] text-sm font-bold font-display">Т</span>
-            </div>
+            <img
+              src="/logo.png"
+              alt="Культура Татарстана"
+              className="h-10 w-10 object-contain"
+            />
             <span className="font-display text-lg font-semibold text-[#1B4332] hidden sm:block">
-              Гид Татарстана
+              Культура Татарстана
             </span>
           </button>
           <div className="w-28" />
@@ -187,7 +189,7 @@ export default function Kazan() {
             <Icon name="ChevronLeft" size={15} />
             Все разделы
           </button>
-          <p className="font-body text-xs text-[#9CA3AF]">© 2026 Гид Татарстана</p>
+          <p className="font-body text-xs text-[#9CA3AF]">© 2026 Культура Татарстана</p>
         </div>
       </footer>
     </div>
