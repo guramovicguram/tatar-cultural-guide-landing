@@ -23,7 +23,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Islam922/hero.png",
+    src: "/Islam922/hero.jpg",
     alt: "Принятие ислама Волжской Булгарией",
     caption: "922 год - важная дата в истории Татарстана",
   },
@@ -39,7 +39,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Islam922/gallery-1.png",
+    src: "/Islam922/gallery-1.jpg",
     alt: "Историческое наследие Волжской Булгарии",
     caption: "Событие 922 года определило дальнейшее развитие региона",
   },
@@ -55,7 +55,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Islam922/gallery-2.png",
+    src: "/Islam922/gallery-2.jpg",
     alt: "Культурное наследие ислама в Татарстане",
     caption: "Исламская традиция стала частью многовековой культуры региона",
   },
@@ -66,7 +66,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Islam922/gallery-3.png",
+    src: "/Islam922/gallery-3.jpg",
     alt: "Память о принятии ислама в 922 году",
     caption: "Событие 922 года - часть общей исторической памяти Татарстана",
   },
@@ -75,7 +75,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
 const ARTICLE_META = {
   title: "Принятие ислама в 922 году",
   subtitle: "Исторический поворот в судьбе Волжской Булгарии",
-  heroImage: "/Islam922/hero.png",
+  heroImage: "/Islam922/hero.jpg",
   location: "Волжская Булгария, территория современного Татарстана",
   period: "922 год",
   tags: ["Ислам", "История", "Булгария", "Татарстан"],

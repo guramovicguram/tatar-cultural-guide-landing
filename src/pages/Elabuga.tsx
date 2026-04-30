@@ -192,7 +192,7 @@ const TOUR_INFO = {
   subtitle: "Елабуга",
   desc: "Маршрут по Елабуге построен как последовательная пешеходная прогулка от древнейших мест города к его центральным улицам, музеям и набережной Камы. Он охватывает историческое начало Елабуги, её главные архитектурные акценты, художественные и литературные музеи, купеческую застройку и природные точки отдыха. Этот путь позволяет увидеть город сразу в нескольких измерениях: как древний центр, как родину Шишкина, как место памяти Марины Цветаевой и как цельный исторический городской ландшафт.",
   images: [
-    "/Elabuga/hero.png",
+    "/Elabuga/hero.jpg",
     SVIYAZHSK_LIKE_IMAGE("Маршрут по Елабуге"),
     SVIYAZHSK_LIKE_IMAGE("Историческая Елабуга"),
   ],
@@ -456,7 +456,7 @@ export default function Elabuga() {
       <nav className="fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-b border-[#E8D9B8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
           <button onClick={() => navigate("/")} className="flex items-center gap-3 group">
-            <img src="/logo.png" alt="Культура Татарстана" className="h-12 w-12 object-contain" />
+            <img src="/logo.jpg" alt="Культура Татарстана" className="h-12 w-12 object-contain" />
             <span className="font-display text-lg font-semibold text-[#1B4332] hidden sm:block group-hover:text-[#2D6A4F] transition-colors">
               Культура Татарстана
             </span>

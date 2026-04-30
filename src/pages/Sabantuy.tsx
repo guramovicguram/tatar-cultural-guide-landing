@@ -23,7 +23,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Sabatyu/image.png",
+    src: "/Sabatyu/image.jpg",
     alt: "Сабантуй в Татарстане",
     caption: "Сабантуй — народный праздник труда, силы и единства",
   },
@@ -34,7 +34,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Sabatyu/image%20copy.png",
+    src: "/Sabatyu/image%20copy.jpg",
     alt: "Праздничное открытие Сабантуя",
     caption: "Торжественное открытие с песнями, танцами и выступлениями",
   },
@@ -45,7 +45,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Sabatyu/image%20copy%202.png",
+    src: "/Sabatyu/image%20copy%202.jpg",
     alt: "Народные игры на Сабантуе",
     caption: "Соревнования и игры создают атмосферу дружеского соперничества",
   },
@@ -56,7 +56,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Sabatyu/image%20copy%203.png",
+    src: "/Sabatyu/image%20copy%203.jpg",
     alt: "Борьба корэш на Сабантуе",
     caption: "Корэш — главный спортивный символ праздника",
   },
@@ -67,7 +67,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Sabatyu/image%20copy%204.png",
+    src: "/Sabatyu/image%20copy%204.jpg",
     alt: "Татарские угощения на Сабантуе",
     caption: "Национальная кухня и чаепитие как часть праздничной культуры",
   },
@@ -78,7 +78,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Sabatyu/image%20copy%205.png",
+    src: "/Sabatyu/image%20copy%205.jpg",
     alt: "Современный Сабантуй",
     caption: "Традиция, которая объединяет татар по всему миру",
   },
@@ -89,7 +89,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Sabatyu/image%20copy%206.png",
+    src: "/Sabatyu/image%20copy%206.jpg",
     alt: "Сабантуй как культурное наследие Татарстана",
     caption: "Праздник, сохраняющий историческую память и живые традиции",
   },
@@ -98,7 +98,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
 const ARTICLE_META = {
   title: "Сабантуй",
   subtitle: "Главный народный праздник татарского народа",
-  heroImage: "/Sabatyu/image.png",
+  heroImage: "/Sabatyu/image.jpg",
   location: "Татарстан",
   period: "Ежегодно, июнь",
   tags: ["Праздники", "Традиции", "Спорт", "Культура"],
@@ -112,7 +112,7 @@ export default function Sabantuy() {
       <nav className="fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-b border-[#E8D9B8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
           <button onClick={() => navigate("/")} className="flex items-center gap-3 group">
-            <img src="/logo.png" alt="Культура Татарстана" className="h-12 w-12 object-contain" />
+            <img src="/logo.jpg" alt="Культура Татарстана" className="h-12 w-12 object-contain" />
             <span className="font-display text-lg font-semibold text-[#1B4332] hidden sm:block group-hover:text-[#2D6A4F] transition-colors">
               Культура Татарстана
             </span>

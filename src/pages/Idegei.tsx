@@ -11,7 +11,7 @@ interface ArticleBlock {
 const ARTICLE_BLOCKS: ArticleBlock[] = [
   {
     type: "image",
-    content: "/Idegei/hero.png",
+    content: "/Idegei/hero.jpg",
     caption: "Героический эпос «Идегей»",
   },
   {
@@ -26,7 +26,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    content: "/Idegei/gallery-1.png",
+    content: "/Idegei/gallery-1.jpg",
     caption: "Иллюстрации к эпосу",
   },
   {
@@ -41,7 +41,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    content: "/Idegei/gallery-2.png",
+    content: "/Idegei/gallery-2.jpg",
     caption: "Традиция устного исполнения эпоса",
   },
   {
@@ -51,7 +51,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    content: "/Idegei/gallery-3.png",
+    content: "/Idegei/gallery-3.jpg",
     caption: "Эпос «Идегей» в культурном наследии",
   },
   {
@@ -100,7 +100,7 @@ export default function Idegei() {
       {/* Hero */}
       <div className="relative h-64 md:h-80 overflow-hidden">
         <img
-          src="/Idegei/hero.png"
+          src="/Idegei/hero.jpg"
           alt={ARTICLE_META.title}
           className="w-full h-full object-cover"
         />

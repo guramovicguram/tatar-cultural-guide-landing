@@ -11,7 +11,7 @@ interface ArticleBlock {
 const ARTICLE_BLOCKS: ArticleBlock[] = [
   {
     type: "image",
-    content: "/ChakChak/hero.png",
+    content: "/ChakChak/hero.jpg",
     caption: "Чак-чак - символ татарской кухни",
   },
   {
@@ -26,7 +26,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    content: "/ChakChak/gallery-1.png",
+    content: "/ChakChak/gallery-1.jpg",
     caption: "Традиционное приготовление чак-чака",
   },
   {
@@ -36,7 +36,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    content: "/ChakChak/gallery-2.png",
+    content: "/ChakChak/gallery-2.jpg",
     caption: "Чак-чак на праздниках и торжествах",
   },
   {
@@ -51,7 +51,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    content: "/ChakChak/gallery-3.png",
+    content: "/ChakChak/gallery-3.jpg",
     caption: "Чак-чак как кулинарное наследие Татарстана",
   },
   {
@@ -87,7 +87,7 @@ export default function ChakChak() {
       </nav>
 
       <div className="relative h-64 md:h-80 overflow-hidden">
-        <img src="/ChakChak/hero.png" alt={ARTICLE_META.title} className="w-full h-full object-cover" />
+        <img src="/ChakChak/hero.jpg" alt={ARTICLE_META.title} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/50 flex flex-col justify-end p-6 md:p-10">
           <div className="flex flex-wrap gap-2 mb-3">
             {ARTICLE_META.tags.map((tag) => (

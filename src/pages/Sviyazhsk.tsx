@@ -154,7 +154,7 @@ const TOUR_INFO = {
   subtitle: "Остров-град Свияжск",
   desc: "Предлагаемый пешеходный маршрут по острову-граду Свияжску охватывает основные достопримечательности: Конный двор, два монастыря, музеи, прогулочные набережные, смотровые площадки и исторические общественные здания. На осмотр главных объектов обычно уходит около 4 часов, а сам маршрут удобно проходить за одну прогулку без возвратов. Рекомендуется приезжать с утра, так как парковка у острова быстро заполняется. Отправная точка — туристско-информационный центр у входа в историческую часть острова, где можно получить пропуск в музей-заповедник и уточнить режим работы музеев. На острове немного кафе и общественных туалетов, поэтому перекус лучше продумать заранее.",
   images: [
-    "/Sviyazhsk/hero.png",
+    "/Sviyazhsk/hero.jpg",
     "https://avatars.mds.yandex.net/i?id=fc5bbc90905e66e551f74bf1826bd278_l-3519607-images-thumbs&n=13",
     "https://yandex-images.clstorage.net/9UPrb7371/c25b56-WbT/ot7C0opuWeBhgijCXDDgf-DT6V9GuDyYbrNeFd7Yx169ImBxdhmQFRU5POlU0CY9RyDexgbs1KYuz_KTmvt9h-2Gh4rIMB7gZJZjyBAq7G_1n_QcU_olnGnqUhWx47d7x04eFV1nuG5VPmu8AMxqfFdJ5d4SvbHDdZaRqoWCD9e6yc_XoU47-UmUQtVnK8hq6YvXfWDAPM9itTFjrPKZU8l9FAR8R4NESBBwihzQMmpzY_iXKKeK6XK3kK2zjy3HoevE9IFMHON0v0rMWj_nXOK3xnlc4w_1cb4kb6TJrE_9SB0GQ2aDaW8xb4g0_iZhaUP2lQiXsNhGm6OPrJor1Jvu-PGPWx_8QIlk62km7337jMpARt09732ROlKt6ZRu41kwJHlSvVVpJWi-IfcAYmxQ6pY1i4nlWKyxqbevGvy57_npu3YE5mqbV_RyKM11263RXVbjGOtCkQBAq9acQudIEx9-cbZQZjh3rSjxNEJnddawBJet3GG7j4mgszrQnubb24J4PeZ_uE7USBrmdciE9X1G1h79d500dZnFoFLVVScPRlS3SV8KR5MA9zNPdVHLqzCOk-Neqpq9oIAN9Kzx59uKSCH-caJ-2GgQznHoscJSRPUE4F6yIky5xJFW6mMmA0dCt0xJKVaBDcULXVpH8ag2l5zlXYeauYKfId-C8s7_gnAt11SdZcp0GMpT1LHrdWv8Fv9iuTBMl_GnbcBiJyJSbINqaxlXjjbtDEFMdfu4ApqS92estLyytwXdrcbk4rRXMctvlEX3RAvuV9yJyW5E1B7Uc5o6YrzrgFfSSQElenq9VEA1QJQq0RdlaHT_ky2NkvZnlKaZuJk--pDl-sOrdgPMT6hAzXIrwk_wpfVpcd80zXGYG0651blsyWUhNntVpnBODW-hI98gbExl7K8NmK3URrmtq5GwIPeB1_z-uXkP4UqLX9ZwOfxAzpHtU0DlN_ZtoA5fqNc",
     "https://avatars.mds.yandex.net/get-vertis-journal/4080458/1.jpg_1714212604174/orig",
@@ -433,7 +433,7 @@ export default function Sviyazhsk() {
       <nav className="fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-b border-[#E8D9B8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
           <button onClick={() => navigate("/")} className="flex items-center gap-3 group">
-            <img src="/logo.png" alt="Культура Татарстана" className="h-12 w-12 object-contain" />
+            <img src="/logo.jpg" alt="Культура Татарстана" className="h-12 w-12 object-contain" />
             <span className="font-display text-lg font-semibold text-[#1B4332] hidden sm:block group-hover:text-[#2D6A4F] transition-colors">
               Культура Татарстана
             </span>

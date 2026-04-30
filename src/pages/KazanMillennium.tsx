@@ -23,7 +23,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Kazan1000/hero.png",
+    src: "/Kazan1000/hero.jpg",
     alt: "Празднование тысячелетия Казани",
     caption: "Тысячелетие Казани - исторический юбилей 2005 года",
   },
@@ -39,7 +39,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Kazan1000/gallery-1.png",
+    src: "/Kazan1000/gallery-1.jpg",
     alt: "Казань во время юбилея",
     caption: "Город заметно преобразился к юбилейным торжествам",
   },
@@ -55,7 +55,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Kazan1000/gallery-2.png",
+    src: "/Kazan1000/gallery-2.jpg",
     alt: "Юбилейные мероприятия в Казани",
     caption: "Культурные и общественные события объединили жителей и гостей города",
   },
@@ -71,7 +71,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Kazan1000/gallery-3.png",
+    src: "/Kazan1000/gallery-3.jpg",
     alt: "Современная Казань после тысячелетия",
     caption: "Наследие юбилея продолжает влиять на развитие города",
   },
@@ -85,7 +85,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
 const ARTICLE_META = {
   title: "1000-летие Казани",
   subtitle: "Юбилей, изменивший город",
-  heroImage: "/Kazan1000/hero.png",
+  heroImage: "/Kazan1000/hero.jpg",
   location: "Казань",
   period: "2005 год",
   tags: ["История", "Юбилей", "Казань", "Культура"],

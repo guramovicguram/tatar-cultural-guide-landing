@@ -23,7 +23,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Nauruz/image.png",
+    src: "/Nauruz/image.jpg",
     alt: "Науруз у татар",
     caption: "Науруз как праздник весны, обновления и нового жизненного цикла",
   },
@@ -34,7 +34,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Nauruz/image%20copy.png",
+    src: "/Nauruz/image%20copy.jpg",
     alt: "Традиции Науруза",
     caption: "Праздник, связанный с очищением дома, обновлением и добрыми пожеланиями",
   },
@@ -45,7 +45,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Nauruz/image%20copy%202.png",
+    src: "/Nauruz/image%20copy%202.jpg",
     alt: "Угощения на Науруз",
     caption: "Щедрый стол и угощение гостей как символы плодородия и благополучия",
   },
@@ -56,7 +56,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Nauruz/image%20copy%203.png",
+    src: "/Nauruz/image%20copy%203.jpg",
     alt: "Народные гуляния на Науруз",
     caption: "Игры, песни и встречи с близкими создают атмосферу праздника и единства",
   },
@@ -70,7 +70,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
 const ARTICLE_META = {
   title: "Науруз",
   subtitle: "Древний праздник весны и обновления",
-  heroImage: "/Nauruz/image.png",
+  heroImage: "/Nauruz/image.jpg",
   location: "Татарстан",
   period: "21 марта",
   tags: ["Праздники", "Весна", "Традиции", "Культура"],
@@ -84,7 +84,7 @@ export default function Nauruz() {
       <nav className="fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-b border-[#E8D9B8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
           <button onClick={() => navigate("/")} className="flex items-center gap-3 group">
-            <img src="/logo.png" alt="Культура Татарстана" className="h-12 w-12 object-contain" />
+            <img src="/logo.jpg" alt="Культура Татарстана" className="h-12 w-12 object-contain" />
             <span className="font-display text-lg font-semibold text-[#1B4332] hidden sm:block group-hover:text-[#2D6A4F] transition-colors">
               Культура Татарстана
             </span>

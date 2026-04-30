@@ -23,7 +23,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/kaz/image.png",
+    src: "/kaz/image.jpg",
     alt: "Каз омасе — татарский обряд",
     caption: "Каз омасе: совместный труд как часть народной традиции",
   },
@@ -34,7 +34,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/kaz/image copy.png",
+    src: "/kaz/image copy.jpg",
     alt: "Подготовка к обряду каз омасе",
     caption: "Подготовка к обряду и сбор участников",
   },
@@ -45,7 +45,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/kaz/image copy 2.png",
+    src: "/kaz/image copy 2.jpg",
     alt: "Совместная работа во время каз омасе",
     caption: "Совместная работа: женщины и девушки выполняют обрядовые действия",
   },
@@ -56,7 +56,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/kaz/image copy 3.png",
+    src: "/kaz/image copy 3.jpg",
     alt: "Татарские песни и общение во время обряда",
     caption: "Во время работы участницы общаются, шутят и поют народные песни",
   },
@@ -67,7 +67,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/kaz/image copy 4.png",
+    src: "/kaz/image copy 4.jpg",
     alt: "Угощение после каз омасе",
     caption: "Завершение обряда: совместное угощение и благодарность участникам",
   },
@@ -78,7 +78,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/kaz/image copy 5.png",
+    src: "/kaz/image copy 5.jpg",
     alt: "Каз омасе в современной культуре Татарстана",
     caption: "Каз омасе сегодня: живая традиция, сохраняемая на праздниках и фестивалях",
   },
@@ -92,7 +92,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
 const ARTICLE_META = {
   title: "Каз омасе",
   subtitle: "Традиционный татарский обряд взаимопомощи",
-  heroImage: "/kaz/image.png",
+  heroImage: "/kaz/image.jpg",
   location: "Татарстан",
   period: "Народная традиция",
   tags: ["Обряды", "Быт", "Татарстан", "Наследие"],
@@ -106,7 +106,7 @@ export default function KazOmase() {
       <nav className="fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-b border-[#E8D9B8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
           <button onClick={() => navigate("/")} className="flex items-center gap-3 group">
-            <img src="/logo.png" alt="Культура Татарстана" className="h-12 w-12 object-contain" />
+            <img src="/logo.jpg" alt="Культура Татарстана" className="h-12 w-12 object-contain" />
             <span className="font-display text-lg font-semibold text-[#1B4332] hidden sm:block group-hover:text-[#2D6A4F] transition-colors">
               Культура Татарстана
             </span>

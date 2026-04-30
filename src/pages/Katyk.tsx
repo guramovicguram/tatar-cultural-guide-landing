@@ -11,7 +11,7 @@ interface ArticleBlock {
 const ARTICLE_BLOCKS: ArticleBlock[] = [
   {
     type: "image",
-    content: "/Katyk/hero.png",
+    content: "/Katyk/hero.jpg",
     caption: "Катык - традиционный кисломолочный продукт",
   },
   {
@@ -26,7 +26,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    content: "/Katyk/gallery-1.png",
+    content: "/Katyk/gallery-1.jpg",
     caption: "Традиционный способ приготовления катыка",
   },
   {
@@ -41,7 +41,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    content: "/Katyk/gallery-2.png",
+    content: "/Katyk/gallery-2.jpg",
     caption: "Катык как основа традиционных напитков",
   },
   {
@@ -51,7 +51,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    content: "/Katyk/gallery-3.png",
+    content: "/Katyk/gallery-3.jpg",
     caption: "Катык в современной татарской кухне",
   },
   {
@@ -87,7 +87,7 @@ export default function Katyk() {
       </nav>
 
       <div className="relative h-64 md:h-80 overflow-hidden">
-        <img src="/Katyk/hero.png" alt={ARTICLE_META.title} className="w-full h-full object-cover" />
+        <img src="/Katyk/hero.jpg" alt={ARTICLE_META.title} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/50 flex flex-col justify-end p-6 md:p-10">
           <div className="flex flex-wrap gap-2 mb-3">
             {ARTICLE_META.tags.map((tag) => (

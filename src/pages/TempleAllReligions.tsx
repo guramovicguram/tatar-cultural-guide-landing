@@ -23,7 +23,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/HramReligii/hero.png",
+    src: "/HramReligii/hero.jpg",
     alt: "Храм всех религий",
     caption: "Храм всех религий в Казани",
   },
@@ -39,7 +39,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/HramReligii/gallery-1.png",
+    src: "/HramReligii/gallery-1.jpg",
     alt: "Купола Храма всех религий",
     caption: "Разнообразие архитектурных форм и куполов",
   },
@@ -55,7 +55,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/HramReligii/gallery-2.png",
+    src: "/HramReligii/gallery-2.jpg",
     alt: "Архитектурные детали Храма всех религий",
     caption: "Яркие фасады и символика разных традиций",
   },
@@ -71,7 +71,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/HramReligii/gallery-3.png",
+    src: "/HramReligii/gallery-3.jpg",
     alt: "Вид на Храм всех религий",
     caption: "Символ толерантности и диалога культур",
   },
@@ -85,7 +85,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
 const ARTICLE_META = {
   title: "Храм всех религий",
   subtitle: "Символ единства культур и конфессий",
-  heroImage: "/HramReligii/hero.png",
+  heroImage: "/HramReligii/hero.jpg",
   location: "Казань, поселок Старое Аракчино",
   period: "С 1994 года",
   tags: ["Архитектура", "Культура", "Толерантность", "Казань"],

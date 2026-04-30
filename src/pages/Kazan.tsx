@@ -62,7 +62,7 @@ export default function Kazan() {
             className="flex items-center gap-2 group"
           >
             <img
-              src="/logo.png"
+              src="/logo.jpg"
               alt="Культура Татарстана"
               className="h-10 w-10 object-contain"
             />

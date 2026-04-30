@@ -731,7 +731,7 @@ export default function StaroTatarskayaSloboda() {
             onClick={() => navigate("/")}
             className="flex items-center gap-3 group"
           >
-            <img src="/logo.png" alt="Культура Татарстана" className="h-12 w-12 object-contain" />
+            <img src="/logo.jpg" alt="Культура Татарстана" className="h-12 w-12 object-contain" />
             <span className="font-display text-lg font-semibold text-[#1B4332] hidden sm:block group-hover:text-[#2D6A4F] transition-colors">
               Культура Татарстана
             </span>

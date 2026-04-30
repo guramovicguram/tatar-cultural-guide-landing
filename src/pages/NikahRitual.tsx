@@ -23,7 +23,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Nikah/image.png",
+    src: "/Nikah/image.jpg",
     alt: "Обряд никах в татарской культуре",
     caption: "Никах как духовный союз и важная семейная традиция",
   },
@@ -34,7 +34,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Nikah/image copy.png",
+    src: "/Nikah/image copy.jpg",
     alt: "Свадебные традиции Татарстана",
     caption: "Семейный обряд, соединяющий два рода",
   },
@@ -45,7 +45,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Nikah/image copy 2.png",
+    src: "/Nikah/image copy 2.jpg",
     alt: "Никах в мечети",
     caption: "Религиозная часть обряда: молитвы, наставления и согласие сторон",
   },
@@ -56,7 +56,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Nikah/image copy 3.png",
+    src: "/Nikah/image copy 3.jpg",
     alt: "Праздничное застолье после никаха",
     caption: "Продолжение обряда: благословения, поздравления и национальные угощения",
   },
@@ -67,7 +67,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Nikah/image copy 4.png",
+    src: "/Nikah/image copy 4.jpg",
     alt: "Современный никах в Татарстане",
     caption: "Традиция, сохраняющая актуальность в современном мире",
   },
@@ -78,7 +78,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Nikah/image copy 5.png",
+    src: "/Nikah/image copy 5.jpg",
     alt: "Никах как культурное наследие Татарстана",
     caption: "Обряд, передающий ценности семьи, уважения и преемственности",
   },
@@ -87,7 +87,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
 const ARTICLE_META = {
   title: "Обряд Никах",
   subtitle: "Традиционный мусульманский свадебный обряд Татарстана",
-  heroImage: "/Nikah/image.png",
+  heroImage: "/Nikah/image.jpg",
   location: "Татарстан",
   period: "Традиция",
   tags: ["Обряды", "Семья", "Ислам", "Татарстан"],
@@ -101,7 +101,7 @@ export default function NikahRitual() {
       <nav className="fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-b border-[#E8D9B8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
           <button onClick={() => navigate("/")} className="flex items-center gap-3 group">
-            <img src="/logo.png" alt="Культура Татарстана" className="h-12 w-12 object-contain" />
+            <img src="/logo.jpg" alt="Культура Татарстана" className="h-12 w-12 object-contain" />
             <span className="font-display text-lg font-semibold text-[#1B4332] hidden sm:block group-hover:text-[#2D6A4F] transition-colors">
               Культура Татарстана
             </span>

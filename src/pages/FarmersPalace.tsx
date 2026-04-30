@@ -11,7 +11,7 @@ interface ArticleBlock {
 const ARTICLE_BLOCKS: ArticleBlock[] = [
   {
     type: "image",
-    content: "/FarmersPalace/hero.png",
+    content: "/FarmersPalace/hero.jpg",
     caption: "Дворец земледельцев в Казани",
   },
   {
@@ -26,7 +26,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    content: "/FarmersPalace/gallery-1.png",
+    content: "/FarmersPalace/gallery-1.jpg",
     caption: "Архитектурный ансамбль рядом с Кремлем",
   },
   {
@@ -41,7 +41,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    content: "/FarmersPalace/gallery-2.png",
+    content: "/FarmersPalace/gallery-2.jpg",
     caption: "Бронзовое дерево - главный символ фасада",
   },
   {
@@ -51,7 +51,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    content: "/FarmersPalace/gallery-3.png",
+    content: "/FarmersPalace/gallery-3.jpg",
     caption: "Площадь перед Дворцом земледельцев",
   },
   {
@@ -92,7 +92,7 @@ export default function FarmersPalace() {
       </nav>
 
       <div className="relative h-64 md:h-80 overflow-hidden">
-        <img src="/FarmersPalace/hero.png" alt={ARTICLE_META.title} className="w-full h-full object-cover" />
+        <img src="/FarmersPalace/hero.jpg" alt={ARTICLE_META.title} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/50 flex flex-col justify-end p-6 md:p-10">
           <div className="flex flex-wrap gap-2 mb-3">
             {ARTICLE_META.tags.map((tag) => (

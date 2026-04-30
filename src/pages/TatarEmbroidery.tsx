@@ -28,7 +28,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/homa/image.png",
+    src: "/homa/image.jpg",
     alt: "Подзор покрывала. Середина XIX века",
     caption: "Подзор покрывала. Середина XIX века. Фрагмент. Шёлк, золотая бахрома; тамбурная вышивка, ковровый шов. Государственный музей изобразительных искусств РТ",
   },
@@ -49,7 +49,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/homa/image copy.png",
+    src: "/homa/image copy.jpg",
     alt: "Кузьминых С.Д. Алтынчеч. 1960-е годы",
     caption: "Кузьминых С.Д. Алтынчеч. 1960-е годы. Подушка. Бархат, тамбурная вышивка",
   },
@@ -60,7 +60,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/homa/image copy 2.png",
+    src: "/homa/image copy 2.jpg",
     alt: "Файзрахманова Р.Ф. Сумочка. 1980-е годы",
     caption: "Файзрахманова Р.Ф. Сумочка. 1980-е годы. Бархат, жемчуг, канитель; вышивка",
   },
@@ -71,7 +71,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/homa/image copy 3.png",
+    src: "/homa/image copy 3.jpg",
     alt: "Калфак с «птичками счастья». XIX век",
     caption: "Калфак с «птичками счастья». XIX век. Бархат, золотные нити, канитель; золотое шитьё. Национальный музей РТ",
   },
@@ -90,7 +90,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
 const ARTICLE_META = {
   title: "Татарская вышивка",
   subtitle: "Многовековое искусство украшения нитью",
-  heroImage: "/homa/image.png",
+  heroImage: "/homa/image.jpg",
   location: "Татарстан",
   period: "XIV–XXI вв.",
   tags: ["Традиции", "Ремёсла", "Искусство", "Татарстан"],
@@ -104,7 +104,7 @@ export default function TatarEmbroidery() {
       <nav className="fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-b border-[#E8D9B8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
           <button onClick={() => navigate("/")} className="flex items-center gap-3 group">
-            <img src="/logo.png" alt="Культура Татарстана" className="h-12 w-12 object-contain" />
+            <img src="/logo.jpg" alt="Культура Татарстана" className="h-12 w-12 object-contain" />
             <span className="font-display text-lg font-semibold text-[#1B4332] hidden sm:block group-hover:text-[#2D6A4F] transition-colors">
               Культура Татарстана
             </span>

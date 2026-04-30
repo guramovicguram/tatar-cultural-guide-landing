@@ -63,7 +63,7 @@ const ALL_CARDS = [
     period: "XVI век",
     tags: ["ЮНЕСКО", "Архитектура"],
     panorama: "",
-    image: "/image copy 4.png"
+    image: "/image copy 4.jpg"
   },
   {
     id: 2, category: "routes", region: "Казань",
@@ -99,7 +99,7 @@ const ALL_CARDS = [
     period: "Традиция",
     tags: ["Быт", "Кулинария"],
     panorama: "",
-    image: "/photogost/image.png"
+    image: "/photogost/image.jpg"
   },
   {
     id: 6, category: "traditions", region: "Весь Татарстан",
@@ -108,7 +108,7 @@ const ALL_CARDS = [
     period: "XIX–XX вв.",
     tags: ["Ремёсла", "Искусство"],
     panorama: "",
-    image: "/homa/image copy 3.png"
+    image: "/homa/image copy 3.jpg"
   },
   {
     id: 7, category: "rituals", region: "Весь Татарстан",
@@ -117,7 +117,7 @@ const ALL_CARDS = [
     period: "Традиция",
     tags: ["Семья", "Ислам"],
     panorama: "",
-    image: "/Nikah/image.png"
+    image: "/Nikah/image.jpg"
   },
   {
     id: 8, category: "rituals", region: "Сельская местность",
@@ -126,7 +126,7 @@ const ALL_CARDS = [
     period: "Традиция",
     tags: ["Быт", "Коллектив"],
     panorama: "",
-    image: "/kaz/image.png"
+    image: "/kaz/image.jpg"
   },
   {
     id: 9, category: "holidays", region: "Весь Татарстан",
@@ -135,7 +135,7 @@ const ALL_CARDS = [
     period: "Ежегодно, июнь",
     tags: ["Спорт", "Музыка"],
     panorama: "",
-    image: "/Sabatyu/image.png"
+    image: "/Sabatyu/image.jpg"
   },
   {
     id: 10, category: "holidays", region: "Весь Татарстан",
@@ -144,7 +144,7 @@ const ALL_CARDS = [
     period: "21 марта",
     tags: ["Весна", "Традиция"],
     panorama: "",
-    image: "/Nauruz/image.png"
+    image: "/Nauruz/image.jpg"
   },
   {
     id: 11, category: "holidays", region: "Весь Татарстан",
@@ -153,7 +153,7 @@ const ALL_CARDS = [
     period: "По лунному календарю",
     tags: ["Ислам", "Традиция"],
     panorama: "",
-    image: "/Kurban/image.png"
+    image: "/Kurban/image.jpg"
   },
   {
     id: 12, category: "people", region: "Казань",
@@ -162,7 +162,7 @@ const ALL_CARDS = [
     period: "1886–1913",
     tags: ["Поэзия", "Литература"],
     panorama: "",
-    image: "/Tukay/hero.png"
+    image: "/Tukay/hero.jpg"
   },
   {
     id: 13, category: "people", region: "Казань",
@@ -171,7 +171,7 @@ const ALL_CARDS = [
     period: "1906–1944",
     tags: ["Поэзия", "Герой"],
     panorama: "",
-    image: "/MusaJalil/hero.png"
+    image: "/MusaJalil/hero.jpg"
   },
   {
     id: 14, category: "people", region: "Казань",
@@ -180,7 +180,7 @@ const ALL_CARDS = [
     period: "1873–1938",
     tags: ["Опера", "Музыка"],
     panorama: "",
-    image: "/Shalyapin/hero.png"
+    image: "/Shalyapin/hero.jpg"
   },
   {
     id: 15, category: "dates", region: "Казань",
@@ -189,7 +189,7 @@ const ALL_CARDS = [
     period: "2005 год",
     tags: ["История", "Юбилей"],
     panorama: "",
-    image: "/Kazan1000/hero.png"
+    image: "/Kazan1000/hero.jpg"
   },
   {
     id: 16, category: "dates", region: "Весь Татарстан",
@@ -198,7 +198,7 @@ const ALL_CARDS = [
     period: "922 год",
     tags: ["Ислам", "История"],
     panorama: "",
-    image: "/Islam922/hero.png"
+    image: "/Islam922/hero.jpg"
   },
   {
     id: 17, category: "heritage", region: "Весь Татарстан",
@@ -207,7 +207,7 @@ const ALL_CARDS = [
     period: "XIV–XV вв.",
     tags: ["Эпос", "Устное творчество"],
     panorama: "",
-    image: "/Idegei/hero.png"
+    image: "/Idegei/hero.jpg"
   },
   {
     id: 18, category: "heritage", region: "Весь Татарстан",
@@ -225,7 +225,7 @@ const ALL_CARDS = [
     period: "Традиция",
     tags: ["Десерт", "Мёд"],
     panorama: "",
-    image: "/ChakChak/hero.png"
+    image: "/ChakChak/hero.jpg"
   },
   {
     id: 20, category: "cuisine", region: "Весь Татарстан",
@@ -234,7 +234,7 @@ const ALL_CARDS = [
     period: "Традиция",
     tags: ["Выпечка", "Мясо"],
     panorama: "",
-    image: "/Echpochmak/hero.png"
+    image: "/Echpochmak/hero.jpg"
   },
   {
     id: 21, category: "cuisine", region: "Весь Татарстан",
@@ -243,7 +243,7 @@ const ALL_CARDS = [
     period: "Традиция",
     tags: ["Мясо", "Конина"],
     panorama: "",
-    image: "/Kazylyk/hero.png"
+    image: "/Kazylyk/hero.jpg"
   },
   {
     id: 22, category: "cuisine", region: "Весь Татарстан",
@@ -252,7 +252,7 @@ const ALL_CARDS = [
     period: "Традиция",
     tags: ["Пирог", "Праздник"],
     panorama: "",
-    image: "/Gubadiya/hero.png"
+    image: "/Gubadiya/hero.jpg"
   },
   {
     id: 23, category: "cuisine", region: "Весь Татарстан",
@@ -261,7 +261,7 @@ const ALL_CARDS = [
     period: "Традиция",
     tags: ["Молочное", "Напитки"],
     panorama: "",
-    image: "/Katyk/hero.png"
+    image: "/Katyk/hero.jpg"
   },
 ];
 
@@ -600,7 +600,7 @@ function Sidebar({ open, onClose, onSelect }: { open: boolean; onClose: () => vo
             onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); onClose(); }}
             className="flex items-center gap-2.5 group"
           >
-            <img src="/logo.png" alt="Культура Татарстана" className="h-16 w-16 object-contain flex-shrink-0" />
+            <img src="/logo.jpg" alt="Культура Татарстана" className="h-16 w-16 object-contain flex-shrink-0" />
             <span className="font-display text-lg font-semibold text-[#1B4332] group-hover:text-[#2D6A4F] transition-colors">
               Культура Татарстана
             </span>
@@ -845,7 +845,7 @@ export default function Index() {
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               className="flex items-center gap-3 group"
             >
-              <img src="/logo.png" alt="Культура Татарстана" className="h-12 w-12 object-contain" />
+              <img src="/logo.jpg" alt="Культура Татарстана" className="h-12 w-12 object-contain" />
               <span className="font-display text-lg font-semibold text-[#1B4332] hidden sm:block group-hover:text-[#2D6A4F] transition-colors">
                 Культура Татарстана
               </span>
@@ -1027,7 +1027,7 @@ export default function Index() {
                     >
                       <div className="relative h-56 overflow-hidden flex-shrink-0">
                         <img
-                          src="/image copy 4.png"
+                          src="/image copy 4.jpg"
                           alt="Казань"
                           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                           onError={(e) => {
@@ -1115,7 +1115,7 @@ export default function Index() {
                     >
                       <div className="relative h-56 overflow-hidden flex-shrink-0">
                         <img
-                          src="/Elabuga/hero.png"
+                          src="/Elabuga/hero.jpg"
                           alt="Елабуга"
                           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                           onError={(e) => {
@@ -1274,7 +1274,7 @@ export default function Index() {
                     >
                       <div className="relative h-56 overflow-hidden flex-shrink-0">
                         <img
-                          src="/HramReligii/hero.png"
+                          src="/HramReligii/hero.jpg"
                           alt="Храм всех религий"
                           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                           onError={(e) => {
@@ -1318,7 +1318,7 @@ export default function Index() {
                     >
                       <div className="relative h-56 overflow-hidden flex-shrink-0">
                         <img
-                          src="/FarmersPalace/hero.png"
+                          src="/FarmersPalace/hero.jpg"
                           alt="Дворец земледельцев"
                           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                           onError={(e) => {
@@ -1437,7 +1437,7 @@ export default function Index() {
                       >
                         <div className="relative h-56 overflow-hidden flex-shrink-0">
                           <img
-                            src="/homa/image copy 3.png"
+                            src="/homa/image copy 3.jpg"
                             alt="Татарская вышивка"
                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                             onError={(e) => {
@@ -2060,7 +2060,7 @@ export default function Index() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-2.5 mb-4">
-                <img src="/logo.png" alt="Культура Татарстана" className="h-12 w-12 object-contain" />
+                <img src="/logo.jpg" alt="Культура Татарстана" className="h-12 w-12 object-contain" />
                 <span className="font-display text-xl font-semibold">Культура Татарстана</span>
               </div>
               <p className="font-body text-sm text-white/55 leading-relaxed max-w-xs">
@@ -2117,7 +2117,7 @@ export default function Index() {
             >
               <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#229ED9] shadow-md shadow-[#229ED9]/30 transition-transform duration-300 group-hover:scale-105">
                 <img
-                  src="/tg-logo.png"
+                  src="/tg-logo.jpg"
                   alt="Telegram"
                   className="h-9 w-9 object-contain"
                 />

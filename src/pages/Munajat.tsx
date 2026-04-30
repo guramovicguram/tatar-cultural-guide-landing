@@ -75,7 +75,7 @@ export default function Munajat() {
       {/* Hero */}
       <div className="relative h-64 md:h-80 overflow-hidden">
         <img
-          src="/Munajat/hero.png"
+          src="/Munajat/hero.jpg"
           alt={ARTICLE_META.title}
           className="w-full h-full object-cover"
         />

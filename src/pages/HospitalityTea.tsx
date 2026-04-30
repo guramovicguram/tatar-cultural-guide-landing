@@ -23,7 +23,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/photogost/image.png",
+    src: "/photogost/image.jpg",
     alt: "Татарское гостеприимство и чаепитие",
     caption: "Чаепитие как символ уважения и домашнего тепла",
   },
@@ -34,7 +34,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/photogost/image%20copy.png",
+    src: "/photogost/image%20copy.jpg",
     alt: "Традиционный стол к чаю у татар",
     caption: "На столе: чак-чак, баурсак и домашняя выпечка",
   },
@@ -45,7 +45,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/photogost/image%20copy%202.png",
+    src: "/photogost/image%20copy%202.jpg",
     alt: "Татарские семейные традиции чаепития",
     caption: "Семейное общение за чаем объединяет поколения",
   },
@@ -56,7 +56,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/photogost/image%20copy%203.png",
+    src: "/photogost/image%20copy%203.jpg",
     alt: "Татарские чайные традиции",
     caption: "Традиция, которая передается из поколения в поколение",
   },
@@ -67,13 +67,13 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/photogost/image%20copy%204.png",
+    src: "/photogost/image%20copy%204.jpg",
     alt: "Культура гостеприимства Татарстана",
     caption: "Гостеприимство как часть культурной идентичности Татарстана",
   },
   {
     type: "image",
-    src: "/photogost/image%20copy%205.png",
+    src: "/photogost/image%20copy%205.jpg",
     alt: "Чаепитие в татарских традициях",
     caption: "Татарское чаепитие: традиция общения и уважения",
   },
@@ -82,7 +82,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
 const ARTICLE_META = {
   title: "Гостеприимство и чаепитие",
   subtitle: "Традиция душевного общения в татарской культуре",
-  heroImage: "/photogost/image.png",
+  heroImage: "/photogost/image.jpg",
   location: "Татарстан",
   period: "Народная традиция",
   tags: ["Традиции", "Чаепитие", "Культура", "Татарстан"],
@@ -96,7 +96,7 @@ export default function HospitalityTea() {
       <nav className="fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-b border-[#E8D9B8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
           <button onClick={() => navigate("/")} className="flex items-center gap-3 group">
-            <img src="/logo.png" alt="Культура Татарстана" className="h-12 w-12 object-contain" />
+            <img src="/logo.jpg" alt="Культура Татарстана" className="h-12 w-12 object-contain" />
             <span className="font-display text-lg font-semibold text-[#1B4332] hidden sm:block group-hover:text-[#2D6A4F] transition-colors">
               Культура Татарстана
             </span>

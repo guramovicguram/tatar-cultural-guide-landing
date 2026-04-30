@@ -23,7 +23,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/MusaJalil/hero.png",
+    src: "/MusaJalil/hero.jpg",
     alt: "Муса Джалиль",
     caption: "Муса Джалиль — поэт и герой Татарстана",
   },
@@ -39,7 +39,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/MusaJalil/gallery-1.png",
+    src: "/MusaJalil/gallery-1.jpg",
     alt: "Память о Мусе Джалиле",
     caption: "Наследие Джалиля связано с мужеством и духовной стойкостью",
   },
@@ -55,7 +55,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/MusaJalil/gallery-2.png",
+    src: "/MusaJalil/gallery-2.jpg",
     alt: "Памятник Мусе Джалилю",
     caption: "Имя Мусы Джалиля увековечено в культуре Татарстана и России",
   },
@@ -69,7 +69,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
 const ARTICLE_META = {
   title: "Муса Джалиль",
   subtitle: "Поэт, ставший символом мужества и стойкости",
-  heroImage: "/MusaJalil/hero.png",
+  heroImage: "/MusaJalil/hero.jpg",
   location: "Татарстан",
   period: "1906–1944",
   tags: ["Поэзия", "История", "Герой", "Татарстан"],

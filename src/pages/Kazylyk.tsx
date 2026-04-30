@@ -11,7 +11,7 @@ interface ArticleBlock {
 const ARTICLE_BLOCKS: ArticleBlock[] = [
   {
     type: "image",
-    content: "/Kazylyk/hero.png",
+    content: "/Kazylyk/hero.jpg",
     caption: "Казылык - традиционная вяленая колбаса",
   },
   {
@@ -26,7 +26,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    content: "/Kazylyk/gallery-1.png",
+    content: "/Kazylyk/gallery-1.jpg",
     caption: "Традиционная подготовка мяса",
   },
   {
@@ -36,7 +36,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    content: "/Kazylyk/gallery-2.png",
+    content: "/Kazylyk/gallery-2.jpg",
     caption: "Казылык в процессе вяления",
   },
   {
@@ -46,7 +46,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    content: "/Kazylyk/gallery-3.png",
+    content: "/Kazylyk/gallery-3.jpg",
     caption: "Подача казылыка на национальном столе",
   },
   {
@@ -56,7 +56,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    content: "/Kazylyk/gallery-4.png",
+    content: "/Kazylyk/gallery-4.jpg",
     caption: "Казылык как часть кулинарного наследия Татарстана",
   },
 ];
@@ -87,7 +87,7 @@ export default function Kazylyk() {
       </nav>
 
       <div className="relative h-64 md:h-80 overflow-hidden">
-        <img src="/Kazylyk/hero.png" alt={ARTICLE_META.title} className="w-full h-full object-cover" />
+        <img src="/Kazylyk/hero.jpg" alt={ARTICLE_META.title} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/50 flex flex-col justify-end p-6 md:p-10">
           <div className="flex flex-wrap gap-2 mb-3">
             {ARTICLE_META.tags.map((tag) => (

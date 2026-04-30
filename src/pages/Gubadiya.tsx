@@ -11,7 +11,7 @@ interface ArticleBlock {
 const ARTICLE_BLOCKS: ArticleBlock[] = [
   {
     type: "image",
-    content: "/Gubadiya/hero.png",
+    content: "/Gubadiya/hero.jpg",
     caption: "Губадия - традиционный многослойный пирог",
   },
   {
@@ -72,7 +72,7 @@ export default function Gubadiya() {
       </nav>
 
       <div className="relative h-64 md:h-80 overflow-hidden">
-        <img src="/Gubadiya/hero.png" alt={ARTICLE_META.title} className="w-full h-full object-cover" />
+        <img src="/Gubadiya/hero.jpg" alt={ARTICLE_META.title} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/50 flex flex-col justify-end p-6 md:p-10">
           <div className="flex flex-wrap gap-2 mb-3">
             {ARTICLE_META.tags.map((tag) => (

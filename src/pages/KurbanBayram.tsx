@@ -23,7 +23,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Kurban/image.png",
+    src: "/Kurban/image.jpg",
     alt: "Курбан-Байрам в татарской культуре",
     caption: "Курбан-Байрам как праздник веры, милосердия и духовной ответственности",
   },
@@ -34,7 +34,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Kurban/image%20copy.png",
+    src: "/Kurban/image%20copy.jpg",
     alt: "Истоки Курбан-Байрама",
     caption: "Праздник напоминает о преданности, испытании веры и милости Всевышнего",
   },
@@ -45,7 +45,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Kurban/image%20copy%202.png",
+    src: "/Kurban/image%20copy%202.jpg",
     alt: "Традиции Курбан-Байрама",
     caption: "Молитва, уважение к близким и помощь нуждающимся — основа праздничного дня",
   },
@@ -56,7 +56,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Kurban/image%20copy%203.png",
+    src: "/Kurban/image%20copy%203.jpg",
     alt: "Угощение на Курбан-Байрам",
     caption: "Семейное угощение и щедрость как важная часть праздничной традиции",
   },
@@ -70,7 +70,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
 const ARTICLE_META = {
   title: "Курбан-Байрам",
   subtitle: "Один из главных мусульманских праздников",
-  heroImage: "/Kurban/image.png",
+  heroImage: "/Kurban/image.jpg",
   location: "Татарстан",
   period: "По лунному календарю",
   tags: ["Праздники", "Ислам", "Традиции", "Милосердие"],
@@ -84,7 +84,7 @@ export default function KurbanBayram() {
       <nav className="fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-b border-[#E8D9B8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
           <button onClick={() => navigate("/")} className="flex items-center gap-3 group">
-            <img src="/logo.png" alt="Культура Татарстана" className="h-12 w-12 object-contain" />
+            <img src="/logo.jpg" alt="Культура Татарстана" className="h-12 w-12 object-contain" />
             <span className="font-display text-lg font-semibold text-[#1B4332] hidden sm:block group-hover:text-[#2D6A4F] transition-colors">
               Культура Татарстана
             </span>

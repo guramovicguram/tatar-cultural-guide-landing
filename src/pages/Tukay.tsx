@@ -23,7 +23,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Tukay/hero.png",
+    src: "/Tukay/hero.jpg",
     alt: "Габдулла Тукай",
     caption: "Габдулла Тукай - символ татарской литературы",
   },
@@ -39,7 +39,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Tukay/gallery-1.png",
+    src: "/Tukay/gallery-1.jpg",
     alt: "Портрет Тукая",
     caption: "Поэт, чье имя стало частью культурного кода Татарстана",
   },
@@ -59,7 +59,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Tukay/gallery-2.png",
+    src: "/Tukay/gallery-2.jpg",
     alt: "Память о Тукае",
     caption: "Наследие Тукая сохраняется в литературе, театре и образовании",
   },
@@ -75,7 +75,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Tukay/gallery-3.png",
+    src: "/Tukay/gallery-3.jpg",
     alt: "Памятник Габдулле Тукаю",
     caption: "Памятники и музеи Тукая есть в разных городах Татарстана",
   },
@@ -86,7 +86,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Tukay/gallery-4.png",
+    src: "/Tukay/gallery-4.jpg",
     alt: "Тукай в культуре Татарстана",
     caption: "Творчество Тукая объединяет традиции и современность",
   },
@@ -100,7 +100,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
 const ARTICLE_META = {
   title: "Габдулла Тукай",
   subtitle: "Поэт, сформировавший голос татарской культуры",
-  heroImage: "/Tukay/hero.png",
+  heroImage: "/Tukay/hero.jpg",
   location: "Татарстан",
   period: "1886-1913",
   tags: ["Поэзия", "Литература", "Татарский язык", "Казань"],

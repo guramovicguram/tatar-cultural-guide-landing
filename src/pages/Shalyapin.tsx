@@ -23,7 +23,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Shalyapin/hero.png",
+    src: "/Shalyapin/hero.jpg",
     alt: "Фёдор Шаляпин",
     caption: "Фёдор Шаляпин — легенда мировой оперной сцены",
   },
@@ -39,7 +39,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Shalyapin/gallery-1.png",
+    src: "/Shalyapin/gallery-1.jpg",
     alt: "Шаляпин на сцене",
     caption: "Шаляпин прославился не только голосом, но и актерским талантом",
   },
@@ -55,7 +55,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Shalyapin/gallery-2.png",
+    src: "/Shalyapin/gallery-2.jpg",
     alt: "Архивные материалы о Шаляпине",
     caption: "Творческий путь артиста стал частью истории мировой музыки",
   },
@@ -66,7 +66,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Shalyapin/gallery-3.png",
+    src: "/Shalyapin/gallery-3.jpg",
     alt: "Память о Фёдоре Шаляпине",
     caption: "Имя Шаляпина неразрывно связано с культурной историей Казани",
   },
@@ -77,7 +77,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
   },
   {
     type: "image",
-    src: "/Shalyapin/gallery-4.png",
+    src: "/Shalyapin/gallery-4.jpg",
     alt: "Наследие Шаляпина",
     caption: "Его творчество продолжает вдохновлять новые поколения музыкантов",
   },
@@ -91,7 +91,7 @@ const ARTICLE_BLOCKS: ArticleBlock[] = [
 const ARTICLE_META = {
   title: "Фёдор Шаляпин",
   subtitle: "Великий бас, прославивший оперное искусство",
-  heroImage: "/Shalyapin/hero.png",
+  heroImage: "/Shalyapin/hero.jpg",
   location: "Казань",
   period: "1873–1938",
   tags: ["Опера", "Музыка", "Казань", "Искусство"],
