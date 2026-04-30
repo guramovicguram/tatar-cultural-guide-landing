@@ -21,9 +21,11 @@ const SVIYAZHSK_POINTS: SviyazhskPoint[] = [
     desc: "Конный двор на Успенской площади — бывший хозяйственный двор Успенского монастыря, сегодня превращённый в туристический этнографический комплекс. Здесь работают сувенирные лавки, кафе, кузница и гончарная мастерская, а в центре расположен манеж для верховой езды. Это удобная первая остановка маршрута: можно осмотреть исторические постройки, купить местный хлеб, мёд и медовуху и настроиться на прогулку по острову.",
     coords: [55.76940046028544,48.65408612746371],
     images: [
-      "https://avatars.mds.yandex.net/get-altay/280932/2a0000015b7a7cf809250f1cdbd0e82015de/XXL_height",
-      "https://avatars.mds.yandex.net/get-altay/15313818/2a000001965f735ad9513a5eb677ef7a6f44/XXL_height",
-      "https://avatars.mds.yandex.net/get-altay/9835424/2a00000188a93f997911e9bf87990248868e/XXL_height",
+      "https://avatars.mds.yandex.net/i?id=7eb2ac50c4a4e494c42968782d44505c5182741d-5220447-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=050d8195e6c179cd3891bfab30cb624e995120ad-5668913-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/get-altay/16136409/2a0000019938197c8837d6652781481af259/L",
+      "https://avatars.mds.yandex.net/get-altay/16443717/2a0000019938197c423a682eed9a80a1d475/L",
+
     ],
   },
   {
@@ -33,9 +35,13 @@ const SVIYAZHSK_POINTS: SviyazhskPoint[] = [
     desc: "Комплекс Иоанно-Предтеченского монастыря конца XVI века включает Троицкую деревянную церковь — единственный сохранившийся храм первоначального деревянного Свияжска. По преданию, здесь молился Иван Грозный перед штурмом Казани. На территории также находится высокий краснокирпичный собор «Всех скорбящих Радость» начала XX века, хорошо заметный из разных точек острова. Это одна из самых выразительных остановок маршрута, где особенно хорошо чувствуется историческая глубина Свияжска.",
     coords: [55.76978850197521,48.659370811868214],
     images: [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Sviyazhsk_Trinity_Church.jpg/1280px-Sviyazhsk_Trinity_Church.jpg",
-      "https://avatars.mds.yandex.net/get-altay/1881406/2a0000016925d5a3d17c46ba316920d910d1/XXXL",
-      "https://avatars.mds.yandex.net/get-altay/1865838/2a000001698e7f7a7df4f7ca34b0a5db51f1/XXXL",
+      "https://avatars.mds.yandex.net/i?id=220acdd978ea6474afced16bdd361713155e19d1-5284135-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=d30e097de8d0375a080279613aacedcb3e44063a-9844228-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=17c1b81484dfbbfda6b2bf6b62e387d2781f8e14-5656601-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=2d57dabce098e2bf0084271afa5afce4a131ec5a-16431930-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=f17f6654cd068802214b27208cfea127500c7b30-4230742-images-thumbs&n=13",
+
+
     ],
   },
   {
@@ -45,8 +51,14 @@ const SVIYAZHSK_POINTS: SviyazhskPoint[] = [
     desc: "Музей истории Свияжска расположен в историческом здании, которое в разные годы использовалось как школа, детский дом и даже тюремное учреждение. Экспозиция рассказывает о прошлом острова через старинные монеты, иконы, предметы быта, костюмы, интерьер крестьянской избы и реконструкцию тюремной камеры XIX века. Это ключевая остановка для тех, кто хочет понять, как жил Свияжск в разные периоды своей истории.",
     coords: [55.77064705241935,48.6554992565349],
     images: [
-      "https://avatars.mds.yandex.net/get-altay/923164/2a00000186559c02d9f22d9d4a80e22f4575/XXL_height",
-      "https://avatars.mds.yandex.net/get-altay/10092548/2a0000018bc13da9963fe8eb8a093dcaa4d8/XXXL",
+      "https://avatars.mds.yandex.net/i?id=7184c8a0f3063d269bcefff4459704b5514587d3-4907872-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=c4fe26cdbb513708fa76b7024cbc31e6fc71291c-4566669-images-thumbs&n=13",
+      "https://visit-tatarstan.com/upload/resize_cache/iblock/6dc/1000_700_2/IMG_6126.jpg",
+      "https://avatars.mds.yandex.net/i?id=fc1df562b0ebfc45b666661231be138dbc524075-8496825-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=d4fb369e856c23db632dbd1914afd64914ee4749-10160381-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=a28661d3f48c06f0676494e7ef2c00654ca4c89a-10807817-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=aa61e2ff8ea538996145226c604b1cbb6bc9c945-10303547-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=3d0fed039f73a6f5ba1564ce8414a218fb3e65a1-7760894-images-thumbs&n=13",
     ],
   },
   {
@@ -56,8 +68,12 @@ const SVIYAZHSK_POINTS: SviyazhskPoint[] = [
     desc: "Этот музей построен прямо над археологическими раскопками старой улицы Свияжска. Здесь можно увидеть срубы домов, остатки заборов, мостовых и другие подлинные элементы городской среды XVII–XVIII веков. Экспозицию дополняют макеты, предметы быта и большое панно с видом древнего города. Это один из самых необычных музеев маршрута, позволяющий буквально увидеть историю под ногами.",
     coords: [55.77443354723444,48.668597764095665],
     images: [
-      "https://avatars.mds.yandex.net/get-altay/4633586/2a0000017b7a188254f95155c15c98b9b46c/XXXL",
-      "https://avatars.mds.yandex.net/get-altay/2361476/2a00000174b5b0501e905e64b1b911fb76f6/XXXL",
+      "https://avatars.mds.yandex.net/i?id=5e67639f35ff9731bf6961af4f7a1947313c4f83-11389740-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=d7df78a68048157fe06006d777b6b750de13b4666e564a1d-11920434-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=d9c389369bee1e6150e57e921c602d8863191474-8496968-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=66f6c0db2d41d4b92fccbe530d1b56013c9155e7-5434194-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=18aa9466c4ff6668876a4e6aac73b346a0b43189-5227582-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=13285fd48ae323cfdf2aa0268c131cef7b80a510-5235706-images-thumbs&n=13",
     ],
   },
   {
@@ -67,8 +83,12 @@ const SVIYAZHSK_POINTS: SviyazhskPoint[] = [
     desc: "Набережная Свияги — одна из самых спокойных и живописных точек маршрута. С верхнего яруса открываются виды на причал, слияние Свияги и Волги, сельские пейзажи и монастырь на противоположном берегу. Это место для короткой паузы, фотографий и отдыха между музеями и монастырями. Особенно красиво здесь в ясную погоду, когда остров раскрывается как единый исторический ландшафт.",
     coords: [55.773146862269535,48.66693892438413],
     images: [
-      "https://avatars.mds.yandex.net/get-altay/9916116/2a000001895fe0bc69bf206372768efd16cd/L",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Sviyazhsk_panorama.jpg/1280px-Sviyazhsk_panorama.jpg",
+      "https://avatars.mds.yandex.net/i?id=2a0000017a0cc5afc6524549d156c532da15-4576286-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=53e55baeb2647073a4cd2e481d1f6b937fb8fc0c-12384307-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=6c4b5f96253e056b6d40315ddeff4e67eb1667a9-7284491-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=4115db626fca99d77af834884c6b77233a6b763e-5877892-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=2d3562ffb63d3c2d50fe3f4cafcba5d148403d73-4438614-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=77b859d5fe4211f00d532dd8769edbe8c8d62a21-5083477-images-thumbs&n=13",
     ],
   },
   {
@@ -78,8 +98,12 @@ const SVIYAZHSK_POINTS: SviyazhskPoint[] = [
     desc: "Комплекс зданий на Рождественской площади включает бывшее ремесленное училище, хозяйственные постройки и восстановленную пожарную каланчу. Сегодня здесь работают визит-центр и художественная галерея, а подъем на каланчу позволяет увидеть панорамы острова и окрестных рек с высоты. Это важная точка для понимания повседневной жизни дореволюционного Свияжска и его городской инфраструктуры.",
     coords: [55.772779524562544,48.663343936927355],
     images: [
-      "https://avatars.mds.yandex.net/get-altay/1361645/2a000001653bbdbfa07409bfa2a31172f4e5/XXXL",
-      "https://avatars.mds.yandex.net/get-altay/5235917/2a0000017c4d4f88306bd56bb4accf1e5332/XXXL",
+      "https://avatars.mds.yandex.net/i?id=c1774199023dcf3abef94a81d558795b51c6810f-7765754-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=1d425574886e6b5e7e115044925e95fe-5668465-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=fee3c4258dd36b2a1a389f574bdd4503220fd978-5887963-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=0a712c4f7a89617d472f5bfc9bf0386fad438017-10099509-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=cb0bc9645b1d75b4fcfc28ac1cd9e646709a8550-16504119-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=df5a24675e79f8bff8a621fe16ae9911645ce838-5234655-images-thumbs&n=13",
     ],
   },
   {
@@ -89,8 +113,13 @@ const SVIYAZHSK_POINTS: SviyazhskPoint[] = [
     desc: "«Ленивый торжок» — площадка исторической реконструкции, где посетители могут познакомиться с атмосферой ярмарочного Свияжска. Здесь устраивают мастер-классы, показывают оружие и доспехи, предлагают пострелять из лука и арбалета, метнуть топор и посмотреть ремесленные демонстрации. Это наиболее интерактивная остановка маршрута, особенно интересная для семей и тех, кто хочет не только смотреть, но и участвовать.",
     coords: [55.772637406103634,48.66091385555987],
     images: [
-      "https://avatars.mds.yandex.net/get-altay/1361645/2a000001653bbdbfa07409bfa2a31172f4e5/XXXL",
-      "https://avatars.mds.yandex.net/get-altay/5242301/2a0000017c588edfd60ef8a36c92774de5be/XXXL",
+      "https://avatars.mds.yandex.net/i?id=f954cf17f7905637acc1dfed552fb70bb839721d-4076840-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=fbda75b9f6c5ce1f825bff276b5e82c9c3520c80-5234369-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=377d6ad52bad95ef8246e27605bc0f5d7cb212a6-5453402-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=377d32ee7621e949e7b5f05b24c15055-4901367-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=7cfd84a4f2965c90163ea9c03a693a423ab1de1b-5159020-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=6a08fe27d23f6c87c8b5c30444eba878-5341226-images-thumbs&n=13",
+
     ],
   },
   {
@@ -100,9 +129,13 @@ const SVIYAZHSK_POINTS: SviyazhskPoint[] = [
     desc: "Богородице-Успенский монастырь, основанный в 1555 году, считается главным монастырским комплексом Свияжска. Внутри находятся Успенский собор и Никольская трапезная церковь XVI века, братские корпуса и монастырская ограда более позднего времени. Именно здесь сохранились знаменитые фрески эпохи Ивана Грозного, включая редкие росписи и исторические изображения. Это финальная и одна из самых значимых точек маршрута.",
     coords: [55.76998261599767,48.65283217703156],
     images: [
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Sviyazhsk_Assumption_Cathedral.jpg/1280px-Sviyazhsk_Assumption_Cathedral.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Sviyazhsk_Assumption_Monastery.jpg/1280px-Sviyazhsk_Assumption_Monastery.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/%D0%A1%D0%BE%D0%B1%D0%BE%D1%80_%D0%A1%D0%B2%D0%B8%D1%8F%D0%B6%D1%81%D0%BA_%D0%BF%D0%B0%D0%BD%D0%BE%D1%80%D0%B0%D0%BC%D0%B0.jpg/1280px-%D0%A1%D0%BE%D0%B1%D0%BE%D1%80_%D0%A1%D0%B2%D0%B8%D1%8F%D0%B6%D1%81%D0%BA_%D0%BF%D0%B0%D0%BD%D0%BE%D1%80%D0%B0%D0%BC%D0%B0.jpg",
+      "https://avatars.mds.yandex.net/i?id=b509e95d4d2ffecc92d77e66173e56289928297d3dbd7c20-12884907-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=0b6f1cf3ce6a3ee7ee70bce0fbdf689cb2f36985-9231626-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=0c27e3d6fc056b199a25a6909e65b98653dda8e2-5519086-images-thumbs&n=13",
+      "https://avatars.mds.yandex.net/i?id=b3e6410ae3162d08d0da1fa0593eb0a74a0c6afc-5308991-images-thumbs&n=13",
+      "https://tatmitropolia.ru/www/news/2019/8/2973547-3_b.jpg",
+      "https://tatmitropolia.ru/www/news2019/4/FSFmgYl5SuA_595.jpg",
+      "https://avatars.mds.yandex.net/i?id=f5b169c20d7d4c14de483bf13a0a3d2bb91f1ccc-4936646-images-thumbs&n=13",
     ],
   },
 ];
@@ -121,7 +154,7 @@ const TOUR_INFO = {
   subtitle: "Остров-град Свияжск",
   desc: "Предлагаемый пешеходный маршрут по острову-граду Свияжску охватывает основные достопримечательности: Конный двор, два монастыря, музеи, прогулочные набережные, смотровые площадки и исторические общественные здания. На осмотр главных объектов обычно уходит около 4 часов, а сам маршрут удобно проходить за одну прогулку без возвратов. Рекомендуется приезжать с утра, так как парковка у острова быстро заполняется. Отправная точка — туристско-информационный центр у входа в историческую часть острова, где можно получить пропуск в музей-заповедник и уточнить режим работы музеев. На острове немного кафе и общественных туалетов, поэтому перекус лучше продумать заранее.",
   images: [
-    "https://avatars.mds.yandex.net/i?id=982fa16b475b86b4eafef613688d7cea_l-9044040-images-thumbs&n=13",
+    "/Sviyazhsk/hero.png",
     "https://avatars.mds.yandex.net/i?id=fc5bbc90905e66e551f74bf1826bd278_l-3519607-images-thumbs&n=13",
     "https://yandex-images.clstorage.net/9UPrb7371/c25b56-WbT/ot7C0opuWeBhgijCXDDgf-DT6V9GuDyYbrNeFd7Yx169ImBxdhmQFRU5POlU0CY9RyDexgbs1KYuz_KTmvt9h-2Gh4rIMB7gZJZjyBAq7G_1n_QcU_olnGnqUhWx47d7x04eFV1nuG5VPmu8AMxqfFdJ5d4SvbHDdZaRqoWCD9e6yc_XoU47-UmUQtVnK8hq6YvXfWDAPM9itTFjrPKZU8l9FAR8R4NESBBwihzQMmpzY_iXKKeK6XK3kK2zjy3HoevE9IFMHON0v0rMWj_nXOK3xnlc4w_1cb4kb6TJrE_9SB0GQ2aDaW8xb4g0_iZhaUP2lQiXsNhGm6OPrJor1Jvu-PGPWx_8QIlk62km7337jMpARt09732ROlKt6ZRu41kwJHlSvVVpJWi-IfcAYmxQ6pY1i4nlWKyxqbevGvy57_npu3YE5mqbV_RyKM11263RXVbjGOtCkQBAq9acQudIEx9-cbZQZjh3rSjxNEJnddawBJet3GG7j4mgszrQnubb24J4PeZ_uE7USBrmdciE9X1G1h79d500dZnFoFLVVScPRlS3SV8KR5MA9zNPdVHLqzCOk-Neqpq9oIAN9Kzx59uKSCH-caJ-2GgQznHoscJSRPUE4F6yIky5xJFW6mMmA0dCt0xJKVaBDcULXVpH8ag2l5zlXYeauYKfId-C8s7_gnAt11SdZcp0GMpT1LHrdWv8Fv9iuTBMl_GnbcBiJyJSbINqaxlXjjbtDEFMdfu4ApqS92estLyytwXdrcbk4rRXMctvlEX3RAvuV9yJyW5E1B7Uc5o6YrzrgFfSSQElenq9VEA1QJQq0RdlaHT_ky2NkvZnlKaZuJk--pDl-sOrdgPMT6hAzXIrwk_wpfVpcd80zXGYG0651blsyWUhNntVpnBODW-hI98gbExl7K8NmK3URrmtq5GwIPeB1_z-uXkP4UqLX9ZwOfxAzpHtU0DlN_ZtoA5fqNc",
     "https://avatars.mds.yandex.net/get-vertis-journal/4080458/1.jpg_1714212604174/orig",

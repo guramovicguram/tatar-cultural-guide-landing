@@ -38,6 +38,8 @@ const DROPDOWN_ITEMS = [
   { id: "dates", label: "Памятные даты" },
   { id: "holidays", label: "Праздники" },
   { id: "traditions", label: "Традиции" },
+  { id: "rituals", label: "Обряды" },
+  { id: "people", label: "Выдающиеся личности" },
   { id: "cuisine", label: "Национальная кухня" },
 ];
 
@@ -553,6 +555,7 @@ const SIDEBAR_NAV = [
 const SIDEBAR_EXTRA = [
   { id: "faq",      label: "Часто задаваемые вопросы" },
   { id: "reviews",  label: "Отзывы" },
+  { id: "quiz",     label: "Тест по достопримечательностям" },
   { id: "feedback", label: "Обратная связь" },
 ];
 
@@ -652,6 +655,15 @@ function Sidebar({ open, onClose, onSelect }: { open: boolean; onClose: () => vo
             >
               <Icon name="MessageCircle" size={15} />
               Оставить отзыв
+            </a>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSedn6MjQ5qIHRMMYHtDMJmee_-S47ubQSTLuikyCklLTagEpQ/viewform"
+              target="_blank"
+              rel="noreferrer"
+              className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-xl border border-[#2D6A4F] bg-transparent px-3 py-2.5 font-body text-sm font-medium text-[#2D6A4F] transition-colors hover:bg-[#2D6A4F]/10"
+            >
+              <Icon name="ClipboardList" size={15} />
+              Пройти тест
             </a>
           </div>
         </div>
@@ -792,7 +804,7 @@ export default function Index() {
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
 
   const scrollToCategory = (id: string) => {
-    const sectionIds = ["faq", "reviews", "feedback", "about"];
+    const sectionIds = ["faq", "reviews", "quiz", "feedback", "about"];
     if (sectionIds.includes(id)) {
       setTimeout(() => {
         document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -843,6 +855,12 @@ export default function Index() {
           <div className="flex items-center gap-1">
             <SectionsDropdown onSelect={scrollToCategory} lang={lang} />
             <button
+              onClick={() => scrollToCategory("faq")}
+              className="hidden md:flex items-center px-4 py-2 rounded-xl font-body font-medium text-sm text-[#1B4332] hover:bg-[#F2EAD3] hover:text-[#2D6A4F] transition-colors"
+            >
+              FAQ
+            </button>
+            <button
               onClick={() => scrollToCategory("about")}
               className="hidden md:flex items-center px-4 py-2 rounded-xl font-body font-medium text-sm text-[#1B4332] hover:bg-[#F2EAD3] hover:text-[#2D6A4F] transition-colors"
             >
@@ -853,6 +871,13 @@ export default function Index() {
               className="hidden md:flex items-center px-4 py-2 rounded-xl font-body font-medium text-sm text-[#1B4332] hover:bg-[#F2EAD3] hover:text-[#2D6A4F] transition-colors"
             >
               {TRANSLATIONS[lang].reviews}
+            </button>
+            <button
+              onClick={() => scrollToCategory("quiz")}
+              className="hidden md:flex items-center gap-1.5 px-4 py-2 rounded-xl font-body font-medium text-sm text-[#2D6A4F] bg-[#2D6A4F]/10 hover:bg-[#2D6A4F] hover:text-white transition-colors"
+            >
+              <Icon name="ClipboardList" size={14} />
+              Тест
             </button>
             <button
               onClick={() => scrollToCategory("feedback")}
@@ -939,7 +964,7 @@ export default function Index() {
               </p>
               <p>
                 Наш проект — интерактивная энциклопедия культурного наследия республики.
-                Виртуальные маршруты с 360° панорамами, рассказы о традициях и обрядах,
+                Виртуальные маршруты с изображениями и описаниями объектов, рассказы о традициях и обрядах,
                 портреты выдающихся деятелей и история памятных дат.
               </p>
               <p className="text-[#2D6A4F] font-semibold">
@@ -949,9 +974,9 @@ export default function Index() {
           </RevealDiv>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              { icon: "Map", label: "Виртуальные маршруты", desc: "Исследуйте объекты культурного наследия Татарстана через 360° панорамы высокого разрешения. Совершите виртуальное путешествие по Казанскому Кремлю, Болгарским комплексам и другим значимым местам, не выходя из дома." },
+              { icon: "Map", label: "Виртуальные маршруты", desc: "Исследуйте объекты культурного наследия Татарстана через виртуальные маршруты. Совершите виртуальное путешествие по Казанскому Кремлю, Татарской слободе и другим значимым местам, не выходя из дома." },
               { icon: "BookOpen", label: "Культура и традиции", desc: "Погрузитесь в многовековое наследие татарского народа и других народностей региона. Узнайте о традиционных обрядах, праздниках, национальной кухне и ремёслах, которые передаются из поколения в поколение." },
-              { icon: "Gamepad2", label: "Интерактивные задания", desc: "Участвуйте в увлекательных квестах и интерактивных заданиях для проверки знаний. Проверьте себя в викторинах о культуре Татарстана и получите сертификаты за прохождение тематических челленджей." },
+              { icon: "Gamepad2", label: "Интерактивные задания", desc: "Участвуйте в увлекательных квестах и интерактивных заданиях для проверки знаний. Проверьте себя в викторинах о культуре Татарстана." },
               { icon: "Users", label: "Выдающиеся личности", desc: "Познакомьтесь с великими деятелями татарской культуры, науки и искусства. От поэтов и балетных дивов до политиков и учёных — люди, которые сформировали облик нации и её вклад в мировую культуру." },
             ].map((f, i) => (
               <RevealDiv key={f.label} delay={i * 80}>
@@ -1077,7 +1102,7 @@ export default function Index() {
                         </div>
                         <div className="flex items-center gap-4 mt-4 pt-3 border-t border-[#F2EAD3] text-xs text-[#9CA3AF] font-body">
                           <span className="flex items-center gap-1"><Icon name="MapPin" size={11} />1 маршрут</span>
-                          <span className="flex items-center gap-1"><Icon name="Eye" size={11} />2 точки</span>
+                          <span className="flex items-center gap-1"><Icon name="Eye" size={11} />8 точек</span>
                           <span className="flex items-center gap-1"><Icon name="Map" size={11} />Яндекс.Карта</span>
                         </div>
                       </div>
@@ -1090,7 +1115,7 @@ export default function Index() {
                     >
                       <div className="relative h-56 overflow-hidden flex-shrink-0">
                         <img
-                          src="https://placehold.co/800x400/2D6A4F/FAF7F0?text=%D0%95%D0%BB%D0%B0%D0%B1%D1%83%D0%B3%D0%B0"
+                          src="/Elabuga/hero.png"
                           alt="Елабуга"
                           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                           onError={(e) => {
@@ -1950,6 +1975,50 @@ export default function Index() {
         </div>
       </section>
 
+      {/* ══ QUIZ ══ */}
+      <section id="quiz" className="py-20 bg-[#F0F7F4]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <RevealDiv className="text-center mb-10">
+            <span className="inline-block bg-[#2D6A4F]/10 text-[#2D6A4F] font-body text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
+              Проверь себя
+            </span>
+            <h2 className="font-display text-4xl sm:text-5xl font-bold text-[#1B4332] mb-3">
+              Тест по достопримечательностям
+            </h2>
+            <p className="font-body text-[#6B7280] max-w-xl mx-auto">
+              Пройдите небольшой тест и узнайте, насколько хорошо вы знаете культурное наследие Татарстана
+            </p>
+          </RevealDiv>
+          <RevealDiv>
+            <div className="rounded-3xl overflow-hidden border border-[#E8D9B8] shadow-xl shadow-black/5">
+              <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSedn6MjQ5qIHRMMYHtDMJmee_-S47ubQSTLuikyCklLTagEpQ/viewform?embedded=true"
+                width="100%"
+                height="700"
+                frameBorder="0"
+                marginHeight={0}
+                marginWidth={0}
+                title="Тест по достопримечательностям Татарстана"
+                className="bg-white"
+              >
+                Загрузка…
+              </iframe>
+            </div>
+            <div className="text-center mt-6">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSedn6MjQ5qIHRMMYHtDMJmee_-S47ubQSTLuikyCklLTagEpQ/viewform"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#2D6A4F] text-white font-body font-medium text-sm hover:bg-[#1B4332] transition-colors shadow-md shadow-[#2D6A4F]/20"
+              >
+                <Icon name="ExternalLink" size={15} />
+                Открыть тест в новой вкладке
+              </a>
+            </div>
+          </RevealDiv>
+        </div>
+      </section>
+
       {/* ══ FEEDBACK ══ */}
       <section id="feedback" className="py-20 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
@@ -2035,7 +2104,7 @@ export default function Index() {
             </p>
             <div className="flex items-center gap-1.5 text-white/35 font-body text-sm">
               <Icon name="Heart" size={13} className="text-[#C9A84C]" />
-              <span>Хомяк</span>
+              <span>Панорама</span>
             </div>
           </div>
           <div className="pt-8 flex flex-col sm:flex-row justify-center gap-4">
