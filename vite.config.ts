@@ -6,6 +6,9 @@ import {componentTagger} from "pp-tagger";
 // https://vitejs.dev/config/
 export default defineConfig(({mode}) => ({
     base: "/tatar-cultural-guide-landing/",
+    build: {
+        outDir: "docs",
+    },
     plugins: [
         react(),
         mode === 'development' &&

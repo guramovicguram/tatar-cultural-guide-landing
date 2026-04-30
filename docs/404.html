@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Культура Татарстана</title>
+  <script>
+    var path = window.location.pathname;
+    var base = '/tatar-cultural-guide-landing';
+    var rest = path.replace(base, '');
+    if (rest && rest !== '/') {
+      sessionStorage.setItem('redirect', rest);
+    }
+    window.location.replace(base + '/');
+  </script>
+</head>
+</html>
